@@ -1,5 +1,4 @@
 import random
-from itertools import permutations
 
 # Generate random station IDs
 stat_ids = ["POL" + str(k) for k in range(20)]
@@ -44,7 +43,7 @@ def generate_distances(stations, file_name):
             connections[station1] = station2
             visited.add(station2)
 
-    for k in range((len(stations) ** 2) // 20):
+    for _ in range(len(stations) ** 2 // 15):
         station1 = random.choice(stations)
         station2 = random.choice(stations)
         while station1 == station2:

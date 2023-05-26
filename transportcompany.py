@@ -87,7 +87,7 @@ if __name__ == "__main__":
     #print(transpol.stationnet.get_station("POL0").available_packages)
     its = transpol.simulation()
     for dri in its:
-        print(dri)
+        print(f"Driver {dri}") 
         for steps in its[dri]:
             print(steps)
         print("-----------")
