@@ -47,7 +47,7 @@ class TransportCompany:
                     if wait_time <= travel_time:
                         print('*driver waits*')
                         if driver.itinerary: # if it's not driver's first action
-                            driver.itinerary.append(f"[{driver.clock_print()}]: Wait at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
+                            driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
                         driver.pass_time(wait_time.seconds // 60)
                         driver.current_station.update_packages(driver.clock)
                         driver.pickup_and_travel()
@@ -57,9 +57,9 @@ class TransportCompany:
                             driver.itinerary.append(f"[{driver.clock_print()}]: START work")
                         #if driver.can_travel_to(stat.id):
                         print("*driver travels elsewhere*")
-                        driver.itinerary.append(f"[{driver.clock_print()}]: Travel to station {stat.id}")
+                        driver.itinerary.append(f"[{driver.clock_print()}]: TRAVEL to station {stat.id}")
                         driver.travel_to(stat.id)
-                        driver.itinerary.append(f"[{driver.clock_print()}]: Arrive at station {driver.current_station.get_id()}")
+                        driver.itinerary.append(f"[{driver.clock_print()}]: ARRIVE at station {driver.current_station.get_id()}")
                         driver.pickup_and_travel()
 
                 #print(driver.itinerary)

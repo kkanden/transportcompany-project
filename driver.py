@@ -45,9 +45,9 @@ class Driver:
             if not self.itinerary:
                 self.clock = pack.time_available
                 self.itinerary.append(f"[{self.clock_print()}]: START work")
-            self.itinerary.append(f"[{self.clock_print()}]: Pick up package {pack.id} from station {self.current_station.get_id()}")
+            self.itinerary.append(f"[{self.clock_print()}]: PICK UP package {pack.id} from station {self.current_station.get_id()}")
             self.travel_to(pack.end_station)
-            self.itinerary.append(f"[{self.clock_print()}]: Deliver package {pack.id} to station {self.current_station.get_id()}")
+            self.itinerary.append(f"[{self.clock_print()}]: DELIVER package {pack.id} to station {self.current_station.get_id()}")
             self.packages_delivered += 1
             break
 
