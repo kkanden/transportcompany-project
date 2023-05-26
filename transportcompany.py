@@ -9,7 +9,7 @@ class TransportCompany:
         self.stationnet.create_network()
         self.packages = Packages(packages_file)
         self.distribute_packages()
-        self.stationnet.update_packages(dt.timedelta(hours=6))
+        # self.stationnet.update_packages(dt.timedelta(hours=6))
 
     def distribute_packages(self):
         for pack_id in self.packages.get_packages():

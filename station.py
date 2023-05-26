@@ -1,4 +1,4 @@
-from vertex import Vertex
+from structures import Vertex
 import datetime as dt
 
 class Station(Vertex):

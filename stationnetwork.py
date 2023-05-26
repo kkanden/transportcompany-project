@@ -1,6 +1,6 @@
 from station import Station
-from graph import Graph
-from dijkstra import Dijkstra
+from structures import Graph
+from structures import Dijkstra
 
 class StationNetwork(Graph):
     def __init__(self, stations_file):
