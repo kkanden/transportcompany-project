@@ -17,7 +17,7 @@ class TransportCompany:
             start_station = self.stationnet.get_station(pack.start_station)
             start_station.add_package(pack)
 
-    def simulation(self):
+    def simulation(self, wtf=False):
         itineraries = {}
         k = 0
         while not self.stationnet.is_empty():
@@ -44,7 +44,10 @@ class TransportCompany:
                             else:
                                 travel_time = min(stat.when_next_package() - driver.clock, travel_time)
 
-                    if wait_time <= travel_time:
+                    if wait_time > dt.timedelta(days=1):
+                        break
+                    
+                    elif wait_time <= travel_time:
                         print('*driver waits*')
                         if driver.itinerary: # if it's not driver's first action
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
@@ -54,7 +57,7 @@ class TransportCompany:
 
                     else:
                         if not driver.itinerary:
-                            driver.itinerary.append(f"[{driver.clock_print()}]: START work")
+                            driver.itinerary.append(f"[{driver.clock_print()}]: START work at station {driver.current_station.get_id()}")
                         #if driver.can_travel_to(stat.id):
                         print("*driver travels elsewhere*")
                         driver.itinerary.append(f"[{driver.clock_print()}]: TRAVEL to station {stat.id}")
@@ -74,6 +77,16 @@ class TransportCompany:
             self.stationnet.reset_packages()
             print(self.stationnet.num_packages_left())
             print("----------------")
+            
+        if wtf:
+            with open("driver itineraries", "w") as f:
+                for dri in itineraries:
+                    f.write(f"Driver {dri}\n")
+                    for step in itineraries[dri]:
+                        f.write(f"{step}\n")
+                    f.write("----------\n")
+                f.write(f"Number of drivers: {len(itineraries)}")
+                    
 
         return itineraries
 
@@ -85,7 +98,7 @@ if __name__ == "__main__":
     #print(transpol.stationnet.is_empty())
     #print(transpol.packages.get_package("100").end_station)
     #print(transpol.stationnet.get_station("POL0").available_packages)
-    its = transpol.simulation()
+    its = transpol.simulation(wtf=True)
     for dri in its:
         print(f"Driver {dri}") 
         for steps in its[dri]:

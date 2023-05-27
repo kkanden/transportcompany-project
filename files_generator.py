@@ -15,7 +15,7 @@ with open("packages.txt", "w") as f:
         minute = "00"
         f.write(f"{package_id} {start} {end} {hour}:{minute}\n")
 
-    for k in range(50, 200):
+    for k in range(50, 120):
         package_id = k
         start = random.choice(stat_ids)
         end = random.choice(stat_ids)
