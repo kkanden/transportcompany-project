@@ -21,7 +21,7 @@ with open("packages.txt", "w") as f:
         end = random.choice(stat_ids)
         while start == end:
             end = random.choice(stat_ids)
-        hour = random.randint(6, 15)  # Random time between 6:00 and 22:00
+        hour = random.randint(6, 19)  # Random time between 6:00 and 22:00
         minute = random.randint(0, 59)
         if minute in range(10):
             minute = "0" + str(minute)
