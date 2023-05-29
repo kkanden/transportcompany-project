@@ -1,0 +1,143 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>248</x><y>608</y><w>136</w><h>96</h></coordinates><panel_attributes>Package
+--
+-id: str
+-start: str
+-end: str
+-time: int
+--
++__init__(id, start, end, time)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>488</x><y>344</y><w>208</w><h>216</h></coordinates><panel_attributes>Driver
+--
+-id: str
+-stationnet: StationNetwork
+-current_station: Station
+-self.clock: datetime.timedelta
+-work_time_remaining: datetime.timedelta
+-packages_delivered: int
+-itinerary: dict
+--
++__init__(id, stationnetwork: StationNetwork)
++can_travel_to(): bool
++can_travel_anywhere(): bool
++pass_time(minutes)
++take_package(pack: Package)
++travel_to(station_id)
++pickup_and_travel()
++clock_print: str
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>256</x><y>336</y><w>160</w><h>120</h></coordinates><panel_attributes>Packages
+--
+-packages: Package[]
+--
++__init__()
++add_package(id, start, end, time)
++get_package(id): Package()
++get_packages()
++is_empty(): bool
++create_packages()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1136</x><y>336</y><w>240</w><h>176</h></coordinates><panel_attributes>StationNetwork
+--
+-stations_file: str
+-stat_list: Station[]
+--
++__init__(stations_file: str)
++add_station(key)
++add_edge(key1, key2, weight=1, symmetric=False)
++get_station(stat_id): Station
++get_stations()
++update_packages(clock: datetime.timedelta)
++reset_packages()
++is_empty(): bool
++num_packages_left(): int
++create_network()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>776</x><y>456</y><w>288</w><h>176</h></coordinates><panel_attributes>Station
+--
+-packages_time: Packages[]
+-available_packages: Packages[]
+-distances: dict
+--
++__init__(key)
++add_package(package: Package)
++update_packages(time: datetime.timedelta)
++reset_packages()
++is_empty(): bool
++has_available_packages(): bool
++when_next_package(): datetime.detlta
++will_have_available_packages(clock: datetime.timedelta): bool
++distance_to(station_id): int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>664</x><y>184</y><w>224</w><h>128</h></coordinates><panel_attributes>TransportCompany
+--
+-stationnet: StationNetwork
+-packages: Packages
+--
++__init__(packages_file: str, stations_file: str)
++distribute_packages()
++simulation(wtf=False): dict
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>472</x><y>688</y><w>152</w><h>128</h></coordinates><panel_attributes>Vertex
+--
+-id: str
+-connected_to: dict
+--
++__init__(key)
++get_id(): str
++add_neighbour(nbr, weight=1)
++get_connections(): Vertex[]
++get_weight(nbr): str
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>832</x><y>688</y><w>200</w><h>128</h></coordinates><panel_attributes>Graph
+--
+-vert_list: Vertex dict
+--
++add_vertex(key)
++get_vertex(key): Vertex
++add_edge(f, t, weight=1, symmetric=False)
++get_vertices()
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1104</x><y>688</y><w>112</w><h>112</h></coordinates><panel_attributes>BFS
+--
+-colors: dict
+-distances: dict
+-predecessors: dict
+--
++__init__(g: Graph)
+-clear()
++bfs(start_key)
++traverse(end_key)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1280</x><y>744</y><w>136</w><h>56</h></coordinates><panel_attributes>Dijkstra
+--
+--
++dijkstra(start_key)
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>736</y><w>232</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*
+-vert_list</panel_attributes><additional_attributes>270;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>736</y><w>96</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-g</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>504</y><w>296</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;230;10;190;350;190;350;10</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>576</y><w>176</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;170;170;170;170;10;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>224</y><w>368</w><h>128</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-packages</panel_attributes><additional_attributes>10;140;10;20;440;20</additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>248</y><w>376</w><h>104</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-stationnet</panel_attributes><additional_attributes>440;110;440;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>376</x><y>504</y><w>416</w><h>152</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+-packages_time, -available_packages,
++add_package</panel_attributes><additional_attributes>500;10;440;10;440;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>304</y><w>24</w><h>168</h></coordinates><panel_attributes>lt=&lt;.
+
+</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>376</x><y>496</y><w>128</w><h>136</h></coordinates><panel_attributes>lt=&lt;.
++take_package</panel_attributes><additional_attributes>10;150;50;150;50;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>528</x><y>792</y><w>648</w><h>136</h></coordinates><panel_attributes>lt=&lt;.
+visits</panel_attributes><additional_attributes>10;30;10;150;790;150;790;10</additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>448</y><w>88</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=*
+-packages
++get_package</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>1208</x><y>768</y><w>88</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>688</x><y>368</y><w>464</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+-stationnet</panel_attributes><additional_attributes>560;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1056</x><y>504</y><w>144</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*
+-stat_list</panel_attributes><additional_attributes>160;10;160;100;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>264</y><w>120</w><h>96</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;100;10;10;130;10</additional_attributes></element></diagram>

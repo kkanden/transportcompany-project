@@ -4,12 +4,12 @@ import random
 class Driver:
     def __init__(self, driver_id, stationnet):
         self.id = driver_id
-        self.itinerary = []
         self.stationnet = stationnet
         self.current_station = random.choice(list(stationnet.stat_list.values()))
         self.clock = dt.timedelta(hours=6, minutes=0)
         self.work_time_remaining = dt.timedelta(hours=8)
         self.packages_delivered = 0
+        self.itinerary = []
 
     def can_travel_to(self, stat_id):
         distance = self.current_station.distance_to(stat_id)
