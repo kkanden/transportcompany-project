@@ -13,7 +13,9 @@ class Package:
     time : str
         time given in HH:MM format representing the time the package
         will be available at source station
-    
+        
+    Methods
+    --------
     """
     def __init__(self, id, start, end, time):
         """ 

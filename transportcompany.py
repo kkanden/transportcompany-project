@@ -14,15 +14,9 @@ class TransportCompany:
         represents the network of stations managed by the company
     packages : Packages
         represents the packages managed by the company
-    
+        
     Methods
-    --------
-    disitribute_packages():
-        parses through all instances of Package in packages attribute and assigns them
-        to their appropriate source station
-    create_itineraries(wtf=False):
-        returns a dictionary containing itineraries for all drivers needed to deliver
-        all packages to their destination; option to write the itineraries to a text file
+    -------
     """
     
     def __init__(self, packages_file, stations_file):
@@ -56,25 +50,22 @@ class TransportCompany:
         """Returns a dictionary containing itineraries for all drivers
         
         The basic structure of this simulation is as follows:
-        A1. While there are undelivered packages in the network instantiate a Driver
-        A2. Keep the Driver working as long as Driver's worktime remaining is greater than zero, their current time
-           is less than 24:00 and they can travel anywhere
-        A3. Go back to 1.
         
-        The basic structure of Driver's work is as follows:
-        B1. If there are available packages at current station, take the first one 
-           available and deliver it
-        B2. Else:
-           B2a. Calculate wait time: how long until next available package at current station
-               and travel time: shortest time to another station that will have an available package
-               upon arrival
-           B2b. If wait time is less than or equal to travel time, wait for the next package
-               and then pick it up and deliver. Go back to 1.
-           B2c. If travel time is less than wait time, travel to another station, wait there
-               for a package if needed, pick it up and deliver. Go back to 1.
+        1. While there are undelivered packages in the network instantiate a Driver
+        2. If Driver's worktime remaining is greater than zero, their current time is less than 24:00 and they can travel anywhere, keep working
+            
+            a. If there are available packages at current station, take the first one  available and deliver it
+            b. Else:
+            
+                1. Calculate wait time: how long until next available package at current station and travel time: shortest time to another station that will have an available package upon arrival
+                2. If wait time is less than or equal to travel time, wait for the next package and then pick it up and deliver. Go back to a.
+                3. If travel time is less than wait time, travel to another station, wait there for a package if needed, pick it up and deliver. Go back to a.
+            
+            c. Go back to 2
+            
+        3. Go back to 1.
         
-        This procedure is executed as long as all conditions described in A2 are met.
-        Once the Driver finishes work, their itinerary is added to a dictionary containing all
+        Once the Driver finishes work (conditions in 2. are not met), their itinerary is added to a dictionary containing all
         itineraries.
         
         
@@ -87,7 +78,7 @@ class TransportCompany:
         """
         
         itineraries = {}
-        k = 1
+        k = 0
         while not self.stationnet.is_empty():
             k += 1
             driver = Driver(k, self.stationnet) #create driver and itinerary list for them
@@ -112,15 +103,12 @@ class TransportCompany:
                             else:
                                 travel_time = min(stat.when_next_package() - driver.clock, travel_time)
 
-                    if wait_time > dt.timedelta(hours=8) or travel_time > dt.timedelta(hours=8):
-                        break
                     
-                    elif wait_time <= travel_time:
-                        if driver.work_time_remaining - wait_time <= dt.timedelta():
+                    if wait_time <= travel_time:
+                        if driver.work_time_remaining - wait_time <= dt.timedelta() or wait_time > dt.timedelta(hours=8) or\
+                            driver.clock + wait_time >= dt.timedelta(days=1):
                             break
                         print('*driver waits*')
-                        # if driver.work_time_remaining - wait_time < dt.timedelta():
-                        #     break
                         if driver.itinerary: # if it's not driver's first action
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
                             driver.pass_time(wait_time.seconds // 60)
@@ -131,6 +119,8 @@ class TransportCompany:
                         driver.pickup_and_travel()
 
                     else:
+                        # if travel_time > dt.timedelta(hours=8):
+                        #     break
                         if not driver.itinerary:
                             driver.itinerary.append(f"[{driver.clock_print()}]: START work at station {driver.current_station.get_id()}")
                         #if driver.can_travel_to(stat.id):
@@ -140,6 +130,9 @@ class TransportCompany:
                         driver.itinerary.append(f"[{driver.clock_print()}]: ARRIVE at station {driver.current_station.get_id()}")
                         if not driver.current_station.has_available_packages():
                             wait_time = driver.current_station.when_next_package() - driver.clock
+                            if wait_time > dt.timedelta(hours=8) or driver.work_time_remaining - wait_time <= dt.timedelta() or\
+                            driver.clock + wait_time >= dt.timedelta(days=1):
+                                break
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
                             driver.pass_time(wait_time.seconds // 60)
                             driver.current_station.update_packages(driver.clock)
@@ -154,6 +147,7 @@ class TransportCompany:
             itineraries[k] = driver.itinerary
             if driver.packages_delivered == 0:
                 del itineraries[k]
+                k -= 1
             self.stationnet.reset_packages()
             print(self.stationnet.num_packages_left())
             print("----------------")

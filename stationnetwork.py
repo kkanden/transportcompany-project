@@ -15,29 +15,9 @@ class StationNetwork(Graph):
         in the following format: Station1 ID, Station2 ID, distance
     stat_list : dict
         equivalent of vert_list in Graph for instances of Station
-    
+        
     Methods
-    --------
-    add_station(stat_id : str):
-        creates instance of Station with given ID and adds it stat_list
-    add_edge(f : str, t : str, weight=1, symmetric=False):
-        overrides Graph's add_edge method such that it also creates connections
-        between instances of Station
-    get_station(stat_id : str):
-        station equivalent of get_vertex
-    get_stations():
-        station equivalent of get_vertices
-    update_packages(clock : datetime.delta)
-        invokes update_packages method on all Stations in stat_list
-    reset_packages()
-        invokes reset_packages method on all Stations in stat_list
-    is_empty()
-        invokes is_empty method on all Stations in stat_list, if all are empty
-        returns True, returns False otherwise
-    num_packages_left()
-        returns the number of packages left in network
-    create_network()
-        creates the network using stations_file; invoked at instantiation
+    -------
     """
     
     def __init__(self, stations_file):
@@ -69,7 +49,7 @@ class StationNetwork(Graph):
         """Overrides Graph's add_edge method such that it also creates connections
         between instances of Station
 
-        Paremeters
+        Parameters
         ----------
         f : str
             ID of first station

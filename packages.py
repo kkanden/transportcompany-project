@@ -14,22 +14,9 @@ class Packages:
     packages : dict
         dictionary with keys being package IDs and values being instances
         of Package class
-    
-    Methods
-    --------
-    create_packages():
-        Creates instances of Package from packages_file and puts
-        them inpackages attribute using add_package method; invoked at instantiation
-    
-    add_package(pack_id, start, end, time_pack):
-        Creates single instance of Package with given variables and puts it in
-        packages attribute
-    
-    get_package(pack_id):
-        Returns instance of Package with given ID
-    
-    get_packages():
-        Returns all instances of Package from packages attribute
+        
+    Methods 
+    -------
     """
     def __init__(self, packages_file):
         """

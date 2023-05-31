@@ -20,31 +20,12 @@ class Station(Vertex):
         this Station
     
     Methods
-    --------
-    add_package(package : Package):
-        adds instance of Package to packages_time attribute
-    update_packages(clock: datetime.timedelta):
-        parses through packages_time and adds instance of Package to available_packages
-        dictionary if clock is greater than or equal to time of availability of Package,
-        then removes that Package from packages_time
-    reset_packages():
-        puts all packages from available_packages back to packages_time and then sorts
-        non-decreasingly by time of availability
-    is_empty():
-        checks whether Station has any packages in packages_time or available_packages
-    has_available_packages():
-        checks whether Station has any packages in available_packages
-    will_have_packages(clock : datetime.timedelta):
-        checks whether Station will have any packages in available_packages at 
-        given time
-    when_next_package():
-        returns time in datetime.delta of next available package
-    distance_to(stat_id : str):
-        returns distance to other Station of given ID
+    -------
     """
     
     def __init__(self, stat_id):
         """
+        
         Parameters
         ----------
         stat_id : str
@@ -117,7 +98,7 @@ class Station(Vertex):
         
         Parameters
         ----------
-        clock : datetime.delta
+        clock : datetime.timedelta
             time to check packages availability by
         """
         
@@ -127,11 +108,11 @@ class Station(Vertex):
         return False
 
     def when_next_package(self):
-        """Returns time in datetime.delta of next available package
+        """Returns time in datetime.timedelta of next available package
         """
         
         if not self.packages_time:
-            return dt.timedelta.max
+            return dt.timedelta(days=100)
         return self.packages_time[0].time_available
 
     def distance_to(self, stat_id):

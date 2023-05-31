@@ -12,39 +12,23 @@ class Driver:
     stationnet : StationNetwork
         instance of StationNetwork the driver lives inside of
     current_stations : Station
-        instance of Station the driver is currently in
+        instance of Station the driver is currently in; at instantiation station is chosen randomly
     clock : datetime.timedelta
         driver's current time, at instantiation set to 6:00 AM
     work_time_remaining : datetime.timedelta
         at instantiation set to 8 hours
     packages_delivered : int
+        number of packages delivered by Driver
     itinerary : list
         list of subsequent actions made by the driver at given time
     
     Methods
-    --------
-    can_travel_to(stat_id : str)
-        returns True if distance to Station with given ID is shorter than
-        remaining worktime, returns False otherwise
-    can_travel_anywhere():
-        invokes can_travel_to method on all Stations in network
-    pass_time(minutes : datetime.timedelta)
-        subtracts given time from work_time_remaining and adds it to clock
-    take_package(pack : Package)
-        removes given instance of Package from driver's current station's
-        available packages
-    travel_to(stat_id : str)
-        changes driver's current station to station given and passes an appropriate
-        amount of time invoking the pass_time method
-    pickup_and_travel():
-        picks up the first available package and travels to package's destination
-        invoking the take_package and travel_to methods
-    clock_print():
-        prints driver's current time in HH:MM format
+    -------
     """
     
     def __init__(self, driver_id, stationnet):
         """
+        
         Parameters
         ----------
         driver_id : str
