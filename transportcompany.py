@@ -4,22 +4,90 @@ from driver import Driver
 import datetime as dt
 
 class TransportCompany:
+    """
+    Class representing the whole transport company. This is where all supplementary
+    classes are used
+    
+    Attribues
+    ---------
+    stationnet : StationNetwork
+        represents the network of stations managed by the company
+    packages : Packages
+        represents the packages managed by the company
+    
+    Methods
+    --------
+    disitribute_packages():
+        parses through all instances of Package in packages attribute and assigns them
+        to their appropriate source station
+    create_itineraries(wtf=False):
+        returns a dictionary containing itineraries for all drivers needed to deliver
+        all packages to their destination; option to write the itineraries to a text file
+    """
+    
     def __init__(self, packages_file, stations_file):
+        """
+        Parameters
+        ----------
+        packages_file : str
+            path to file with packages information each line being in
+            following format: unique ID, ID of source station, ID of destination,
+            time (HH:MM) of availability at source station
+        stations_file : str
+            path to file with information about the network of stations each line being
+            in the following format: Station1 ID, Station2 ID, distance
+        """
+        
         self.stationnet = StationNetwork(stations_file)
-        self.stationnet.create_network()
         self.packages = Packages(packages_file)
         self.distribute_packages()
         # self.stationnet.update_packages(dt.timedelta(hours=6))
 
     def distribute_packages(self):
+        """Parses through all instances of Package in packages attribute and assigns them
+        to their appropriate source station"""
+        
         for pack_id in self.packages.get_packages():
             pack = self.packages.get_package(pack_id)
             start_station = self.stationnet.get_station(pack.start_station)
             start_station.add_package(pack)
 
-    def simulation(self, wtf=False):
+    def create_itineraries(self, wtf=False):
+        """Returns a dictionary containing itineraries for all drivers
+        
+        The basic structure of this simulation is as follows:
+        A1. While there are undelivered packages in the network instantiate a Driver
+        A2. Keep the Driver working as long as Driver's worktime remaining is greater than zero, their current time
+           is less than 24:00 and they can travel anywhere
+        A3. Go back to 1.
+        
+        The basic structure of Driver's work is as follows:
+        B1. If there are available packages at current station, take the first one 
+           available and deliver it
+        B2. Else:
+           B2a. Calculate wait time: how long until next available package at current station
+               and travel time: shortest time to another station that will have an available package
+               upon arrival
+           B2b. If wait time is less than or equal to travel time, wait for the next package
+               and then pick it up and deliver. Go back to 1.
+           B2c. If travel time is less than wait time, travel to another station, wait there
+               for a package if needed, pick it up and deliver. Go back to 1.
+        
+        This procedure is executed as long as all conditions described in A2 are met.
+        Once the Driver finishes work, their itinerary is added to a dictionary containing all
+        itineraries.
+        
+        
+        Parameters
+        __________  
+        wtf : bool
+            optional argument set by default to False determining whether to write
+            the drivers' itineraries to a text file
+               
+        """
+        
         itineraries = {}
-        k = 0
+        k = 1
         while not self.stationnet.is_empty():
             k += 1
             driver = Driver(k, self.stationnet) #create driver and itinerary list for them
@@ -44,10 +112,12 @@ class TransportCompany:
                             else:
                                 travel_time = min(stat.when_next_package() - driver.clock, travel_time)
 
-                    if wait_time > dt.timedelta(days=1):
+                    if wait_time > dt.timedelta(hours=8) or travel_time > dt.timedelta(hours=8):
                         break
                     
                     elif wait_time <= travel_time:
+                        if driver.work_time_remaining - wait_time <= dt.timedelta():
+                            break
                         print('*driver waits*')
                         # if driver.work_time_remaining - wait_time < dt.timedelta():
                         #     break
@@ -57,6 +127,7 @@ class TransportCompany:
                             driver.current_station.update_packages(driver.clock)
                         else:
                             driver.clock += wait_time
+                            driver.current_station.update_packages(driver.clock)
                         driver.pickup_and_travel()
 
                     else:
@@ -64,9 +135,14 @@ class TransportCompany:
                             driver.itinerary.append(f"[{driver.clock_print()}]: START work at station {driver.current_station.get_id()}")
                         #if driver.can_travel_to(stat.id):
                         print("*driver travels elsewhere*")
-                        driver.itinerary.append(f"[{driver.clock_print()}]: TRAVEL to station {stat.id}")
+                        driver.itinerary.append(f"[{driver.clock_print()}]: TRAVEL to station {stat.id} from {driver.current_station.get_id()}")
                         driver.travel_to(stat.id)
                         driver.itinerary.append(f"[{driver.clock_print()}]: ARRIVE at station {driver.current_station.get_id()}")
+                        if not driver.current_station.has_available_packages():
+                            wait_time = driver.current_station.when_next_package() - driver.clock
+                            driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
+                            driver.pass_time(wait_time.seconds // 60)
+                            driver.current_station.update_packages(driver.clock)
                         driver.pickup_and_travel()
 
                 #print(driver.itinerary)
@@ -102,7 +178,7 @@ if __name__ == "__main__":
     #print(transpol.stationnet.is_empty())
     #print(transpol.packages.get_package("100").end_station)
     #print(transpol.stationnet.get_station("POL0").available_packages)
-    its = transpol.simulation(wtf=True)
+    its = transpol.create_itineraries(wtf=True)
     for dri in its:
         print(f"Driver {dri}") 
         for steps in its[dri]:
