@@ -103,11 +103,12 @@ class TransportCompany:
                             else:
                                 travel_time = min(stat.when_next_package() - driver.clock, travel_time)
 
-                    
+                    if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1):
+                        break
                     if wait_time <= travel_time:
-                        if driver.work_time_remaining - wait_time <= dt.timedelta() or wait_time > dt.timedelta(hours=8) or\
-                            driver.clock + wait_time >= dt.timedelta(days=1):
-                            break
+                        # if driver.work_time_remaining - wait_time <= dt.timedelta() or wait_time > dt.timedelta(hours=8) or\
+                        #     driver.clock + wait_time >= dt.timedelta(days=1):
+                        #     break
                         print('*driver waits*')
                         if driver.itinerary: # if it's not driver's first action
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
@@ -130,8 +131,7 @@ class TransportCompany:
                         driver.itinerary.append(f"[{driver.clock_print()}]: ARRIVE at station {driver.current_station.get_id()}")
                         if not driver.current_station.has_available_packages():
                             wait_time = driver.current_station.when_next_package() - driver.clock
-                            if wait_time > dt.timedelta(hours=8) or driver.work_time_remaining - wait_time <= dt.timedelta() or\
-                            driver.clock + wait_time >= dt.timedelta(days=1):
+                            if driver.clock + wait_time >= dt.timedelta(hours=23, minutes=59):
                                 break
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
                             driver.pass_time(wait_time.seconds // 60)
@@ -147,7 +147,7 @@ class TransportCompany:
             itineraries[k] = driver.itinerary
             if driver.packages_delivered == 0:
                 del itineraries[k]
-                k -= 1
+                #k -= 1
             self.stationnet.reset_packages()
             print(self.stationnet.num_packages_left())
             print("----------------")
