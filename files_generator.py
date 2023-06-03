@@ -24,7 +24,7 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
     assert n_packages > 0
     stat_ids = ["POL" + str(k) for k in range(n_stations)]
     with open(file_name_pack, "w") as f:
-        for k in range(n_packages // 5):
+        for k in range(n_packages // 4):
             package_id = k
             start = random.choice(stat_ids)
             end = random.choice(stat_ids)
@@ -34,13 +34,13 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
             minute = "00"
             f.write(f"{package_id} {start} {end} {hour}:{minute}\n")
 
-        for k in range(n_packages // 5, n_packages):
+        for k in range(n_packages // 4, n_packages):
             package_id = k
             start = random.choice(stat_ids)
             end = random.choice(stat_ids)
             while start == end:
                 end = random.choice(stat_ids)
-            hour = random.randint(6, 15)  # Random time between 6:00 and 22:00
+            hour = random.randint(6, 12)  # Random time between 6:00 and 22:00
             minute = random.randint(0, 59)
             if minute in range(10):
                 minute = "0" + str(minute)
