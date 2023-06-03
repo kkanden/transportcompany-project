@@ -1,407 +1,362 @@
 Driver 1
-[6:00]: START work at station POL12
-[6:00]: PICK UP package 0 from station POL12
-[6:42]: DELIVER package 0 to station POL1
-[6:42]: TRAVEL to station POL5 from POL1
-[7:14]: ARRIVE at station POL5
-[7:14]: PICK UP package 6 from station POL5
-[7:59]: DELIVER package 6 to station POL8
-[7:59]: PICK UP package 16 from station POL8
-[8:44]: DELIVER package 16 to station POL5
-[8:44]: PICK UP package 11 from station POL5
-[9:16]: DELIVER package 11 to station POL1
-[9:16]: PICK UP package 51 from station POL1
-[10:17]: DELIVER package 51 to station POL0
-[10:17]: PICK UP package 7 from station POL0
-[10:38]: DELIVER package 7 to station POL12
-[10:38]: TRAVEL to station POL7 from POL12
-[11:07]: ARRIVE at station POL7
-[11:07]: PICK UP package 36 from station POL7
-[11:40]: DELIVER package 36 to station POL9
-[11:40]: PICK UP package 50 from station POL9
-[12:14]: DELIVER package 50 to station POL6
-[12:14]: PICK UP package 18 from station POL6
-[13:11]: DELIVER package 18 to station POL10
-[13:11]: PICK UP package 22 from station POL10
-[13:58]: DELIVER package 22 to station POL2
-[13:58]: PICK UP package 5 from station POL2
-[14:36]: DELIVER package 5 to station POL16
-[14:36]: FINISH work at station POL16
-Total work time: 8 hours and 36 minutes
-Number of packages delivered: 11
+[6:00]: START work at station POL2
+[6:00]: PICK UP package 2 from station POL2
+[7:44]: DELIVER package 2 to station POL7
+[7:44]: PICK UP package 1 from station POL7
+[9:28]: DELIVER package 1 to station POL2
+[9:28]: PICK UP package 44 from station POL2
+[10:30]: DELIVER package 44 to station POL9
+[10:30]: PICK UP package 15 from station POL9
+[11:32]: DELIVER package 15 to station POL2
+[11:32]: PICK UP package 95 from station POL2
+[12:34]: DELIVER package 95 to station POL9
+[12:34]: PICK UP package 85 from station POL9
+[13:08]: DELIVER package 85 to station POL0
+[13:08]: PICK UP package 6 from station POL0
+[13:42]: DELIVER package 6 to station POL9
+[13:42]: PICK UP package 75 from station POL9
+[13:54]: DELIVER package 75 to station POL8
+[13:54]: PICK UP package 10 from station POL8
+[14:30]: DELIVER package 10 to station POL1
+[14:30]: FINISH work at station POL1
+Total work time: 8 hours and 30 minutes
+Number of packages delivered: 9
 ----------
 Driver 2
-[6:00]: START work at station POL12
-[6:00]: TRAVEL to station POL2 from POL12
-[7:11]: ARRIVE at station POL2
-[7:11]: PICK UP package 68 from station POL2
-[8:59]: DELIVER package 68 to station POL9
-[8:59]: TRAVEL to station POL1 from POL9
-[9:38]: ARRIVE at station POL1
-[9:38]: PICK UP package 40 from station POL1
-[10:10]: DELIVER package 40 to station POL5
-[10:10]: PICK UP package 28 from station POL5
-[10:29]: DELIVER package 28 to station POL15
-[10:29]: PICK UP package 72 from station POL15
-[10:39]: DELIVER package 72 to station POL11
-[10:39]: PICK UP package 14 from station POL11
-[10:51]: DELIVER package 14 to station POL14
-[10:51]: PICK UP package 19 from station POL14
-[11:11]: DELIVER package 19 to station POL17
-[11:11]: PICK UP package 98 from station POL17
-[12:07]: DELIVER package 98 to station POL18
-[12:07]: PICK UP package 96 from station POL18
-[12:52]: DELIVER package 96 to station POL6
-[12:52]: PICK UP package 56 from station POL6
-[13:26]: DELIVER package 56 to station POL9
-[13:26]: PICK UP package 94 from station POL9
-[14:29]: DELIVER package 94 to station POL14
-[14:29]: FINISH work at station POL14
-Total work time: 8 hours and 29 minutes
-Number of packages delivered: 10
-----------
-Driver 3
-[6:00]: START work at station POL1
-[6:00]: TRAVEL to station POL0 from POL1
-[7:01]: ARRIVE at station POL0
-[7:01]: PICK UP package 15 from station POL0
-[7:56]: DELIVER package 15 to station POL17
-[7:56]: PICK UP package 9 from station POL17
-[8:16]: DELIVER package 9 to station POL14
-[8:16]: PICK UP package 3 from station POL14
-[8:50]: DELIVER package 3 to station POL12
-[8:50]: TRAVEL to station POL1 from POL12
-[9:32]: ARRIVE at station POL1
-[9:32]: PICK UP package 41 from station POL1
-[10:23]: DELIVER package 41 to station POL15
-[10:23]: PICK UP package 92 from station POL15
-[10:50]: DELIVER package 92 to station POL6
-[10:50]: PICK UP package 69 from station POL6
-[11:07]: DELIVER package 69 to station POL11
-[11:07]: PICK UP package 4 from station POL11
-[11:33]: DELIVER package 4 to station POL13
-[11:33]: PICK UP package 25 from station POL13
-[12:02]: DELIVER package 25 to station POL18
-[12:02]: PICK UP package 49 from station POL18
-[12:30]: DELIVER package 49 to station POL11
-[12:30]: PICK UP package 85 from station POL11
-[12:58]: DELIVER package 85 to station POL18
-[12:58]: TRAVEL to station POL8 from POL18
-[13:30]: ARRIVE at station POL8
-[13:30]: PICK UP package 46 from station POL8
-[13:42]: DELIVER package 46 to station POL4
-[13:42]: PICK UP package 79 from station POL4
-[14:05]: DELIVER package 79 to station POL11
-[14:05]: FINISH work at station POL11
-Total work time: 8 hours and 5 minutes
-Number of packages delivered: 12
-----------
-Driver 4
-[11:13]: START work at station POL3
-[11:13]: PICK UP package 21 from station POL3
-[12:10]: DELIVER package 21 to station POL17
-[12:10]: PICK UP package 84 from station POL17
-[12:30]: DELIVER package 84 to station POL14
-[12:30]: PICK UP package 63 from station POL14
-[12:53]: DELIVER package 63 to station POL8
-[12:53]: PICK UP package 52 from station POL8
-[13:28]: DELIVER package 52 to station POL11
-[13:28]: PICK UP package 76 from station POL11
-[14:01]: DELIVER package 76 to station POL12
-[14:01]: PICK UP package 44 from station POL12
-[14:34]: DELIVER package 44 to station POL16
-[14:34]: PICK UP package 77 from station POL16
-[15:49]: DELIVER package 77 to station POL1
-[15:49]: PICK UP package 54 from station POL1
-[16:58]: DELIVER package 54 to station POL18
-[16:58]: PICK UP package 74 from station POL18
-[17:48]: DELIVER package 74 to station POL16
-[17:48]: PICK UP package 29 from station POL16
-[17:58]: DELIVER package 29 to station POL4
-[17:58]: PICK UP package 64 from station POL4
-[18:31]: DELIVER package 64 to station POL15
-[18:31]: PICK UP package 1 from station POL15
-[19:01]: DELIVER package 1 to station POL10
-[19:01]: PICK UP package 91 from station POL10
-[19:45]: DELIVER package 91 to station POL17
-[19:45]: FINISH work at station POL17
-Total work time: 8 hours and 32 minutes
-Number of packages delivered: 13
-----------
-Driver 5
-[6:00]: START work at station POL11
-[6:00]: TRAVEL to station POL4 from POL11
-[6:23]: ARRIVE at station POL4
-[6:23]: PICK UP package 80 from station POL4
-[7:37]: DELIVER package 80 to station POL9
-[7:37]: TRAVEL to station POL2 from POL9
-[9:25]: ARRIVE at station POL2
-[9:25]: PICK UP package 97 from station POL2
-[10:57]: DELIVER package 97 to station POL7
-[10:57]: PICK UP package 59 from station POL7
-[12:29]: DELIVER package 59 to station POL2
-[12:29]: PICK UP package 95 from station POL2
-[13:52]: DELIVER package 95 to station POL0
-[13:52]: PICK UP package 60 from station POL0
-[14:15]: DELIVER package 60 to station POL11
-[14:15]: FINISH work at station POL11
-Total work time: 8 hours and 15 minutes
-Number of packages delivered: 5
-----------
-Driver 6
-[6:00]: START work at station POL7
-[6:00]: TRAVEL to station POL19 from POL7
-[7:17]: ARRIVE at station POL19
-[7:17]: PICK UP package 43 from station POL19
-[8:15]: DELIVER package 43 to station POL15
-[8:15]: TRAVEL to station POL9 from POL15
-[9:16]: ARRIVE at station POL9
-[9:16]: WAIT at station POL9 for 353 minutes
-[15:09]: PICK UP package 78 from station POL9
-[16:10]: DELIVER package 78 to station POL15
-[16:10]: FINISH work at station POL15
-Total work time: 10 hours and 10 minutes
-Number of packages delivered: 2
-----------
-Driver 7
-[6:00]: START work at station POL7
-[6:00]: TRAVEL to station POL19 from POL7
-[7:17]: ARRIVE at station POL19
-[7:17]: PICK UP package 42 from station POL19
-[8:30]: DELIVER package 42 to station POL3
-[8:30]: TRAVEL to station POL4 from POL3
-[9:18]: ARRIVE at station POL4
-[9:18]: PICK UP package 2 from station POL4
-[9:50]: DELIVER package 2 to station POL10
-[9:50]: PICK UP package 67 from station POL10
-[10:50]: DELIVER package 67 to station POL7
-[10:50]: PICK UP package 88 from station POL7
-[11:50]: DELIVER package 88 to station POL10
-[11:50]: TRAVEL to station POL4 from POL10
-[12:22]: ARRIVE at station POL4
-[12:22]: PICK UP package 10 from station POL4
-[12:47]: DELIVER package 10 to station POL19
-[12:47]: PICK UP package 12 from station POL19
-[13:52]: DELIVER package 12 to station POL18
-[13:52]: TRAVEL to station POL14 from POL18
-[14:32]: ARRIVE at station POL14
-[14:32]: PICK UP package 37 from station POL14
-[14:55]: DELIVER package 37 to station POL8
-[14:55]: FINISH work at station POL8
-Total work time: 8 hours and 55 minutes
+[11:29]: START work at station POL9
+[11:29]: PICK UP package 22 from station POL9
+[12:31]: DELIVER package 22 to station POL2
+[12:31]: PICK UP package 98 from station POL2
+[13:50]: DELIVER package 98 to station POL6
+[13:50]: PICK UP package 35 from station POL6
+[14:09]: DELIVER package 35 to station POL3
+[14:09]: PICK UP package 9 from station POL3
+[15:08]: DELIVER package 9 to station POL7
+[15:08]: PICK UP package 13 from station POL7
+[16:52]: DELIVER package 13 to station POL2
+[16:52]: PICK UP package 82 from station POL2
+[18:36]: DELIVER package 82 to station POL7
+[18:36]: PICK UP package 99 from station POL7
+[19:35]: DELIVER package 99 to station POL6
+[19:35]: FINISH work at station POL6
+Total work time: 8 hours and 6 minutes
 Number of packages delivered: 7
 ----------
-Driver 8
-[6:00]: START work at station POL10
-[6:00]: TRAVEL to station POL19 from POL10
-[6:57]: ARRIVE at station POL19
-[6:57]: PICK UP package 26 from station POL19
-[8:14]: DELIVER package 26 to station POL7
-[8:14]: TRAVEL to station POL13 from POL7
-[9:12]: ARRIVE at station POL13
-[9:12]: PICK UP package 8 from station POL13
-[9:41]: DELIVER package 8 to station POL18
-[9:41]: TRAVEL to station POL3 from POL18
-[10:37]: ARRIVE at station POL3
-[10:37]: PICK UP package 27 from station POL3
-[11:15]: DELIVER package 27 to station POL15
-[11:15]: TRAVEL to station POL4 from POL15
-[11:48]: ARRIVE at station POL4
-[11:48]: PICK UP package 23 from station POL4
-[11:59]: DELIVER package 23 to station POL14
-[11:59]: TRAVEL to station POL9 from POL14
-[13:02]: ARRIVE at station POL9
-[13:02]: FINISH work at station POL9
-Total work time: 7 hours and 2 minutes
-Number of packages delivered: 4
+Driver 3
+[11:26]: START work at station POL4
+[11:26]: PICK UP package 89 from station POL4
+[12:30]: DELIVER package 89 to station POL2
+[12:30]: PICK UP package 97 from station POL2
+[13:49]: DELIVER package 97 to station POL6
+[13:49]: PICK UP package 67 from station POL6
+[14:18]: DELIVER package 67 to station POL8
+[14:18]: PICK UP package 42 from station POL8
+[15:32]: DELIVER package 42 to station POL2
+[15:32]: PICK UP package 52 from station POL2
+[16:46]: DELIVER package 52 to station POL8
+[16:46]: PICK UP package 80 from station POL8
+[17:22]: DELIVER package 80 to station POL1
+[17:22]: PICK UP package 93 from station POL1
+[18:25]: DELIVER package 93 to station POL4
+[18:25]: PICK UP package 51 from station POL4
+[18:49]: DELIVER package 51 to station POL5
+[18:49]: PICK UP package 32 from station POL5
+[19:28]: DELIVER package 32 to station POL6
+[19:28]: FINISH work at station POL6
+Total work time: 8 hours and 2 minutes
+Number of packages delivered: 9
 ----------
-Driver 9
-[6:00]: START work at station POL8
-[6:00]: TRAVEL to station POL2 from POL8
-[7:00]: ARRIVE at station POL2
-[7:00]: PICK UP package 13 from station POL2
-[7:32]: DELIVER package 13 to station POL18
-[7:32]: TRAVEL to station POL13 from POL18
-[8:01]: ARRIVE at station POL13
-[8:01]: PICK UP package 57 from station POL13
-[8:34]: DELIVER package 57 to station POL3
-[8:34]: TRAVEL to station POL4 from POL3
-[9:22]: ARRIVE at station POL4
-[9:22]: PICK UP package 83 from station POL4
-[9:32]: DELIVER package 83 to station POL16
-[9:32]: PICK UP package 17 from station POL16
-[10:28]: DELIVER package 17 to station POL3
-[10:28]: WAIT at station POL3 for 2 minutes
-[10:30]: PICK UP package 82 from station POL3
-[11:58]: DELIVER package 82 to station POL2
-[11:58]: PICK UP package 62 from station POL2
-[12:54]: DELIVER package 62 to station POL17
-[12:54]: PICK UP package 75 from station POL17
-[13:52]: DELIVER package 75 to station POL13
-[13:52]: PICK UP package 45 from station POL13
-[14:25]: DELIVER package 45 to station POL3
-[14:25]: FINISH work at station POL3
-Total work time: 8 hours and 25 minutes
+Driver 4
+[11:05]: START work at station POL6
+[11:05]: PICK UP package 39 from station POL6
+[11:34]: DELIVER package 39 to station POL0
+[11:34]: PICK UP package 7 from station POL0
+[12:08]: DELIVER package 7 to station POL9
+[12:08]: PICK UP package 86 from station POL9
+[12:42]: DELIVER package 86 to station POL0
+[12:42]: PICK UP package 61 from station POL0
+[13:30]: DELIVER package 61 to station POL3
+[13:30]: PICK UP package 87 from station POL3
+[14:09]: DELIVER package 87 to station POL5
+[14:09]: PICK UP package 84 from station POL5
+[14:48]: DELIVER package 84 to station POL6
+[14:48]: PICK UP package 69 from station POL6
+[15:29]: DELIVER package 69 to station POL4
+[15:29]: PICK UP package 77 from station POL4
+[16:57]: DELIVER package 77 to station POL7
+[16:57]: PICK UP package 31 from station POL7
+[18:41]: DELIVER package 31 to station POL2
+[18:41]: PICK UP package 50 from station POL2
+[20:00]: DELIVER package 50 to station POL3
+[20:00]: FINISH work at station POL3
+Total work time: 8 hours and 55 minutes
+Number of packages delivered: 10
+----------
+Driver 5
+[12:36]: START work at station POL9
+[12:36]: PICK UP package 29 from station POL9
+[13:38]: DELIVER package 29 to station POL2
+[13:38]: PICK UP package 38 from station POL2
+[15:04]: DELIVER package 38 to station POL1
+[15:04]: PICK UP package 79 from station POL1
+[15:45]: DELIVER package 79 to station POL3
+[15:45]: PICK UP package 11 from station POL3
+[16:04]: DELIVER package 11 to station POL6
+[16:04]: PICK UP package 91 from station POL6
+[17:03]: DELIVER package 91 to station POL7
+[17:03]: PICK UP package 19 from station POL7
+[18:09]: DELIVER package 19 to station POL1
+[18:09]: PICK UP package 33 from station POL1
+[19:15]: DELIVER package 33 to station POL7
+[19:15]: PICK UP package 78 from station POL7
+[20:43]: DELIVER package 78 to station POL4
+[20:43]: FINISH work at station POL4
+Total work time: 8 hours and 7 minutes
 Number of packages delivered: 8
 ----------
+Driver 6
+[14:04]: START work at station POL9
+[14:04]: PICK UP package 94 from station POL9
+[14:46]: DELIVER package 94 to station POL7
+[14:46]: PICK UP package 59 from station POL7
+[15:52]: DELIVER package 59 to station POL1
+[15:52]: PICK UP package 18 from station POL1
+[16:16]: DELIVER package 18 to station POL9
+[16:16]: PICK UP package 30 from station POL9
+[16:33]: DELIVER package 30 to station POL3
+[16:33]: PICK UP package 49 from station POL3
+[17:02]: DELIVER package 49 to station POL8
+[17:02]: PICK UP package 25 from station POL8
+[17:31]: DELIVER package 25 to station POL6
+[17:31]: PICK UP package 72 from station POL6
+[18:30]: DELIVER package 72 to station POL7
+[18:30]: PICK UP package 65 from station POL7
+[19:29]: DELIVER package 65 to station POL3
+[19:29]: PICK UP package 36 from station POL3
+[20:28]: DELIVER package 36 to station POL7
+[20:28]: FINISH work at station POL7
+Total work time: 6 hours and 24 minutes
+Number of packages delivered: 9
+----------
+Driver 7
+[6:00]: START work at station POL5
+[6:00]: PICK UP package 8 from station POL5
+[6:22]: DELIVER package 8 to station POL9
+[6:22]: PICK UP package 43 from station POL9
+[6:56]: DELIVER package 43 to station POL0
+[6:56]: PICK UP package 54 from station POL0
+[8:12]: DELIVER package 54 to station POL7
+[8:12]: TRAVEL to station POL8 from POL7
+[8:42]: ARRIVE at station POL8
+[8:42]: PICK UP package 23 from station POL8
+[9:11]: DELIVER package 23 to station POL3
+[9:11]: PICK UP package 47 from station POL3
+[9:28]: DELIVER package 47 to station POL9
+[9:28]: PICK UP package 48 from station POL9
+[9:45]: DELIVER package 48 to station POL3
+[9:45]: PICK UP package 76 from station POL3
+[10:44]: DELIVER package 76 to station POL7
+[10:44]: TRAVEL to station POL0 from POL7
+[12:00]: ARRIVE at station POL0
+[12:00]: PICK UP package 62 from station POL0
+[12:48]: DELIVER package 62 to station POL3
+[12:48]: PICK UP package 96 from station POL3
+[13:07]: DELIVER package 96 to station POL6
+[13:07]: PICK UP package 20 from station POL6
+[14:06]: DELIVER package 20 to station POL7
+[14:06]: FINISH work at station POL7
+Total work time: 8 hours and 6 minutes
+Number of packages delivered: 10
+----------
+Driver 8
+[6:00]: START work at station POL9
+[6:00]: TRAVEL to station POL5 from POL9
+[6:22]: ARRIVE at station POL5
+[6:22]: PICK UP package 70 from station POL5
+[7:01]: DELIVER package 70 to station POL3
+[7:01]: PICK UP package 3 from station POL3
+[8:20]: DELIVER package 3 to station POL2
+[8:20]: TRAVEL to station POL0 from POL2
+[9:12]: ARRIVE at station POL0
+[9:12]: PICK UP package 53 from station POL0
+[10:00]: DELIVER package 53 to station POL3
+[10:00]: PICK UP package 0 from station POL3
+[10:29]: DELIVER package 0 to station POL8
+[10:29]: PICK UP package 21 from station POL8
+[10:59]: DELIVER package 21 to station POL7
+[10:59]: TRAVEL to station POL0 from POL7
+[12:15]: ARRIVE at station POL0
+[12:15]: PICK UP package 55 from station POL0
+[12:27]: DELIVER package 55 to station POL5
+[12:27]: PICK UP package 57 from station POL5
+[13:13]: DELIVER package 57 to station POL1
+[13:13]: PICK UP package 40 from station POL1
+[13:37]: DELIVER package 40 to station POL9
+[13:37]: PICK UP package 28 from station POL9
+[14:19]: DELIVER package 28 to station POL7
+[14:19]: FINISH work at station POL7
+Total work time: 8 hours and 19 minutes
+Number of packages delivered: 9
+----------
+Driver 9
+[6:00]: START work at station POL9
+[6:00]: TRAVEL to station POL5 from POL9
+[6:22]: ARRIVE at station POL5
+[6:22]: PICK UP package 56 from station POL5
+[6:34]: DELIVER package 56 to station POL0
+[6:34]: PICK UP package 88 from station POL0
+[7:03]: DELIVER package 88 to station POL6
+[7:03]: PICK UP package 71 from station POL6
+[7:25]: DELIVER package 71 to station POL1
+[7:25]: PICK UP package 27 from station POL1
+[8:16]: DELIVER package 27 to station POL0
+[8:16]: WAIT at station POL0 for 28 minutes
+[8:44]: PICK UP package 92 from station POL0
+[8:56]: DELIVER package 92 to station POL5
+[8:56]: PICK UP package 34 from station POL5
+[9:18]: DELIVER package 34 to station POL9
+[9:18]: TRAVEL to station POL2 from POL9
+[10:20]: ARRIVE at station POL2
+[10:20]: WAIT at station POL2 for 290 minutes
+[15:10]: PICK UP package 73 from station POL2
+[16:29]: DELIVER package 73 to station POL3
+[16:29]: FINISH work at station POL3
+Total work time: 10 hours and 29 minutes
+Number of packages delivered: 7
+----------
+Driver 10
+[6:00]: START work at station POL9
+[6:00]: TRAVEL to station POL1 from POL9
+[6:24]: ARRIVE at station POL1
+[6:24]: PICK UP package 5 from station POL1
+[7:30]: DELIVER package 5 to station POL7
+[7:30]: TRAVEL to station POL8 from POL7
+[8:00]: ARRIVE at station POL8
+[8:00]: PICK UP package 26 from station POL8
+[8:34]: DELIVER package 26 to station POL5
+[8:34]: TRAVEL to station POL6 from POL5
+[9:13]: ARRIVE at station POL6
+[9:13]: PICK UP package 14 from station POL6
+[9:32]: DELIVER package 14 to station POL3
+[9:32]: PICK UP package 41 from station POL3
+[9:49]: DELIVER package 41 to station POL9
+[9:49]: TRAVEL to station POL2 from POL9
+[10:51]: ARRIVE at station POL2
+[10:51]: WAIT at station POL2 for 267 minutes
+[15:18]: PICK UP package 81 from station POL2
+[16:37]: DELIVER package 81 to station POL3
+[16:37]: FINISH work at station POL3
+Total work time: 10 hours and 37 minutes
+Number of packages delivered: 5
+----------
+Driver 12
+[6:00]: START work at station POL8
+[6:00]: PICK UP package 16 from station POL8
+[6:29]: DELIVER package 16 to station POL3
+[6:29]: TRAVEL to station POL2 from POL3
+[7:48]: ARRIVE at station POL2
+[7:48]: FINISH work at station POL2
+Total work time: 1 hours and 48 minutes
+Number of packages delivered: 1
+----------
 Driver 13
-[6:55]: START work at station POL5
-[6:55]: PICK UP package 58 from station POL5
-[8:04]: DELIVER package 58 to station POL2
-[8:04]: TRAVEL to station POL9 from POL2
-[9:52]: ARRIVE at station POL9
-[9:52]: FINISH work at station POL9
-Total work time: 2 hours and 57 minutes
+[6:00]: START work at station POL4
+[6:00]: PICK UP package 17 from station POL4
+[7:04]: DELIVER package 17 to station POL2
+[7:04]: TRAVEL to station POL8 from POL2
+[8:18]: ARRIVE at station POL8
+[8:18]: PICK UP package 74 from station POL8
+[9:32]: DELIVER package 74 to station POL2
+[9:32]: TRAVEL to station POL6 from POL2
+[10:51]: ARRIVE at station POL6
+[10:51]: PICK UP package 64 from station POL6
+[11:10]: DELIVER package 64 to station POL3
+[11:10]: WAIT at station POL3 for 132 minutes
+[13:22]: PICK UP package 24 from station POL3
+[14:22]: DELIVER package 24 to station POL4
+[14:22]: FINISH work at station POL4
+Total work time: 8 hours and 22 minutes
+Number of packages delivered: 4
+----------
+Driver 21
+[6:00]: START work at station POL1
+[6:00]: PICK UP package 4 from station POL1
+[6:51]: DELIVER package 4 to station POL0
+[6:51]: TRAVEL to station POL7 from POL0
+[8:07]: ARRIVE at station POL7
+[8:07]: FINISH work at station POL7
+Total work time: 2 hours and 7 minutes
 Number of packages delivered: 1
 ----------
-Driver 14
-[6:00]: START work at station POL11
-[6:00]: TRAVEL to station POL7 from POL11
-[7:02]: ARRIVE at station POL7
-[7:02]: WAIT at station POL7 for 468 minutes
-[14:50]: PICK UP package 48 from station POL7
-[15:42]: DELIVER package 48 to station POL15
-[15:42]: FINISH work at station POL15
-Total work time: 9 hours and 42 minutes
-Number of packages delivered: 1
+Driver 31
+[8:21]: START work at station POL8
+[8:21]: PICK UP package 90 from station POL8
+[9:07]: DELIVER package 90 to station POL0
+[9:07]: TRAVEL to station POL1 from POL0
+[9:58]: ARRIVE at station POL1
+[9:58]: PICK UP package 12 from station POL1
+[10:22]: DELIVER package 12 to station POL9
+[10:22]: TRAVEL to station POL2 from POL9
+[11:24]: ARRIVE at station POL2
+[11:24]: FINISH work at station POL2
+Total work time: 3 hours and 3 minutes
+Number of packages delivered: 2
 ----------
-Driver 15
-[6:00]: START work at station POL0
-[6:00]: TRAVEL to station POL2 from POL0
-[7:23]: ARRIVE at station POL2
-[7:23]: WAIT at station POL2 for 378 minutes
-[13:41]: PICK UP package 33 from station POL2
-[14:40]: DELIVER package 33 to station POL14
-[14:40]: FINISH work at station POL14
-Total work time: 8 hours and 40 minutes
-Number of packages delivered: 1
+Driver 41
+[8:35]: START work at station POL6
+[8:35]: PICK UP package 45 from station POL6
+[9:04]: DELIVER package 45 to station POL8
+[9:04]: TRAVEL to station POL1 from POL8
+[9:40]: ARRIVE at station POL1
+[9:40]: PICK UP package 66 from station POL1
+[11:06]: DELIVER package 66 to station POL2
+[11:06]: TRAVEL to station POL7 from POL2
+[12:50]: ARRIVE at station POL7
+[12:50]: FINISH work at station POL7
+Total work time: 4 hours and 15 minutes
+Number of packages delivered: 2
 ----------
-Driver 20
-[9:15]: START work at station POL4
-[9:15]: PICK UP package 53 from station POL4
-[9:43]: DELIVER package 53 to station POL17
-[9:43]: TRAVEL to station POL13 from POL17
-[10:41]: ARRIVE at station POL13
-[10:41]: PICK UP package 38 from station POL13
-[11:24]: DELIVER package 38 to station POL6
-[11:24]: TRAVEL to station POL2 from POL6
-[12:38]: ARRIVE at station POL2
-[12:38]: FINISH work at station POL2
-Total work time: 3 hours and 23 minutes
+Driver 44
+[14:25]: START work at station POL1
+[14:25]: PICK UP package 60 from station POL1
+[15:06]: DELIVER package 60 to station POL3
+[15:06]: TRAVEL to station POL8 from POL3
+[15:35]: ARRIVE at station POL8
+[15:35]: PICK UP package 37 from station POL8
+[16:04]: DELIVER package 37 to station POL3
+[16:04]: FINISH work at station POL3
+Total work time: 1 hours and 39 minutes
+Number of packages delivered: 2
+----------
+Driver 51
+[14:42]: START work at station POL1
+[14:42]: PICK UP package 58 from station POL1
+[15:06]: DELIVER package 58 to station POL9
+[15:06]: WAIT at station POL9 for 23 minutes
+[15:29]: PICK UP package 46 from station POL9
+[15:46]: DELIVER package 46 to station POL6
+[15:46]: FINISH work at station POL6
+Total work time: 1 hours and 4 minutes
+Number of packages delivered: 2
+----------
+Driver 53
+[15:25]: START work at station POL4
+[15:25]: PICK UP package 68 from station POL4
+[15:37]: DELIVER package 68 to station POL0
+[15:37]: TRAVEL to station POL5 from POL0
+[15:49]: ARRIVE at station POL5
+[15:49]: PICK UP package 63 from station POL5
+[16:11]: DELIVER package 63 to station POL9
+[16:11]: FINISH work at station POL9
+Total work time: 0 hours and 46 minutes
 Number of packages delivered: 2
 ----------
 Driver 60
-[9:39]: START work at station POL5
-[9:39]: PICK UP package 30 from station POL5
-[9:58]: DELIVER package 30 to station POL15
-[9:58]: TRAVEL to station POL9 from POL15
-[10:59]: ARRIVE at station POL9
-[10:59]: FINISH work at station POL9
-Total work time: 1 hours and 20 minutes
+[15:32]: START work at station POL1
+[15:32]: PICK UP package 83 from station POL1
+[16:18]: DELIVER package 83 to station POL5
+[16:18]: FINISH work at station POL5
+Total work time: 0 hours and 46 minutes
 Number of packages delivered: 1
 ----------
-Driver 79
-[10:29]: START work at station POL5
-[10:29]: PICK UP package 70 from station POL5
-[10:48]: DELIVER package 70 to station POL15
-[10:48]: TRAVEL to station POL16 from POL15
-[11:21]: ARRIVE at station POL16
-[11:21]: PICK UP package 31 from station POL16
-[12:15]: DELIVER package 31 to station POL7
-[12:15]: TRAVEL to station POL10 from POL7
-[13:15]: ARRIVE at station POL10
-[13:15]: PICK UP package 20 from station POL10
-[14:12]: DELIVER package 20 to station POL19
-[14:12]: TRAVEL to station POL14 from POL19
-[14:48]: ARRIVE at station POL14
-[14:48]: PICK UP package 93 from station POL14
-[15:47]: DELIVER package 93 to station POL2
-[15:47]: TRAVEL to station POL8 from POL2
-[16:47]: ARRIVE at station POL8
-[16:47]: PICK UP package 61 from station POL8
-[17:32]: DELIVER package 61 to station POL15
-[17:32]: PICK UP package 35 from station POL15
-[17:55]: DELIVER package 35 to station POL12
-[17:55]: PICK UP package 47 from station POL12
-[18:57]: DELIVER package 47 to station POL9
-[18:57]: FINISH work at station POL9
-Total work time: 8 hours and 28 minutes
-Number of packages delivered: 7
-----------
-Driver 85
-[14:31]: START work at station POL3
-[14:31]: PICK UP package 73 from station POL3
-[15:27]: DELIVER package 73 to station POL16
-[15:27]: PICK UP package 71 from station POL16
-[16:37]: DELIVER package 71 to station POL9
-[16:37]: TRAVEL to station POL19 from POL9
-[18:16]: ARRIVE at station POL19
-[18:16]: PICK UP package 34 from station POL19
-[18:53]: DELIVER package 34 to station POL8
-[18:53]: PICK UP package 24 from station POL8
-[19:30]: DELIVER package 24 to station POL19
-[19:30]: PICK UP package 90 from station POL19
-[20:06]: DELIVER package 90 to station POL14
-[20:06]: PICK UP package 89 from station POL14
-[20:40]: DELIVER package 89 to station POL12
-[20:40]: FINISH work at station POL12
-Total work time: 6 hours and 9 minutes
-Number of packages delivered: 6
-----------
-Driver 93
-[14:46]: START work at station POL11
-[14:46]: PICK UP package 65 from station POL11
-[15:09]: DELIVER package 65 to station POL0
-[15:09]: TRAVEL to station POL5 from POL0
-[15:38]: ARRIVE at station POL5
-[15:38]: PICK UP package 32 from station POL5
-[16:21]: DELIVER package 32 to station POL16
-[16:21]: FINISH work at station POL16
-Total work time: 1 hours and 35 minutes
-Number of packages delivered: 2
-----------
-Driver 110
-[15:16]: START work at station POL8
-[15:16]: PICK UP package 81 from station POL8
-[15:40]: DELIVER package 81 to station POL17
-[15:40]: PICK UP package 86 from station POL17
-[16:29]: DELIVER package 86 to station POL6
-[16:29]: PICK UP package 39 from station POL6
-[17:18]: DELIVER package 39 to station POL17
-[17:18]: FINISH work at station POL17
-Total work time: 2 hours and 2 minutes
-Number of packages delivered: 3
-----------
-Driver 127
-[15:26]: START work at station POL5
-[15:26]: PICK UP package 99 from station POL5
-[15:59]: DELIVER package 99 to station POL4
-[15:59]: FINISH work at station POL4
-Total work time: 0 hours and 33 minutes
-Number of packages delivered: 1
-----------
-Driver 128
-[15:33]: START work at station POL10
-[15:33]: PICK UP package 55 from station POL10
-[16:14]: DELIVER package 55 to station POL5
-[16:14]: FINISH work at station POL5
-Total work time: 0 hours and 41 minutes
-Number of packages delivered: 1
-----------
-Driver 184
-[15:41]: START work at station POL19
-[15:41]: PICK UP package 66 from station POL19
-[16:58]: DELIVER package 66 to station POL7
-[16:58]: FINISH work at station POL7
-Total work time: 1 hours and 17 minutes
-Number of packages delivered: 1
-----------
-Driver 187
-[15:43]: START work at station POL13
-[15:43]: PICK UP package 87 from station POL13
-[16:41]: DELIVER package 87 to station POL7
-[16:41]: FINISH work at station POL7
-Total work time: 0 hours and 58 minutes
-Number of packages delivered: 1
-----------
-Number of drivers: 22
+Number of drivers: 19

@@ -78,9 +78,8 @@ class TransportCompany:
         """
         
         itineraries = {}
-        k = 0
+        k = 1
         while not self.stationnet.is_empty():
-            k += 1
             driver = Driver(k, self.stationnet) #create driver and itinerary list for them
             while driver.work_time_remaining > dt.timedelta() and driver.clock <= dt.timedelta(days=1) and\
                     driver.can_travel_anywhere(): #driver works for max 8h or until 24:00
@@ -102,8 +101,9 @@ class TransportCompany:
                                 break # break because this will be minimal time
                             else:
                                 travel_time = min(stat.when_next_package() - driver.clock, travel_time)
+                                #stat = None
 
-                    if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1):
+                    if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1) or stat is None:
                         break
                     if wait_time <= travel_time:
                         # if driver.work_time_remaining - wait_time <= dt.timedelta() or wait_time > dt.timedelta(hours=8) or\
@@ -150,6 +150,7 @@ class TransportCompany:
                 #k -= 1
             self.stationnet.reset_packages()
             print(self.stationnet.num_packages_left())
+            k += 1
             print("----------------")
             
         if wtf:

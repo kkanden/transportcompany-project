@@ -5,7 +5,7 @@ from packages import Packages
 
 class TestPackages(unittest.TestCase):
     def setUp(self):
-        self.packages_file = "C:\\Users\\Gracz\\OneDrive\\Desktop\\GitHub\\transportcompany-project\\unit tests\\kupa.txt"
+        self.packages_file = "C:\\Users\\Gracz\\OneDrive\\Desktop\\GitHub\\transportcompany-project\\unit tests\\test_packages.txt"
 
     @patch("builtins.open")
     def test_create_packages(self, mock_open):
