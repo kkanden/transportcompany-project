@@ -80,9 +80,9 @@ class TransportCompany:
         itineraries = {}
         k = 1
         while not self.stationnet.is_empty():
-            driver = Driver(k, self.stationnet) #create driver and itinerary list for them
+            driver = Driver(k, self.stationnet) # create driver and itinerary list for them
             while driver.work_time_remaining > dt.timedelta() and driver.clock <= dt.timedelta(days=1) and\
-                    driver.can_travel_anywhere(): #driver works for max 8h or until 24:00
+                    driver.can_travel_anywhere(): # driver works for max 8h or until 24:00
                 self.stationnet.update_packages(driver.clock)
 
                 if driver.current_station.has_available_packages(): #if possible, pick up package from here and travel
@@ -120,11 +120,8 @@ class TransportCompany:
                         driver.pickup_and_travel()
 
                     else:
-                        # if travel_time > dt.timedelta(hours=8):
-                        #     break
                         if not driver.itinerary:
                             driver.itinerary.append(f"[{driver.clock_print()}]: START work at station {driver.current_station.get_id()}")
-                        #if driver.can_travel_to(stat.id):
                         print("*driver travels elsewhere*")
                         driver.itinerary.append(f"[{driver.clock_print()}]: TRAVEL to station {stat.id} from {driver.current_station.get_id()}")
                         driver.travel_to(stat.id)

@@ -40,7 +40,7 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
             end = random.choice(stat_ids)
             while start == end:
                 end = random.choice(stat_ids)
-            hour = random.randint(6, 12)  # Random time between 6:00 and 22:00
+            hour = random.randint(6, 14)  # Random time between 6:00 and 22:00
             minute = random.randint(0, 59)
             if minute in range(10):
                 minute = "0" + str(minute)
@@ -75,5 +75,5 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
 
 
 if __name__ == "__main__":
-    generate_files(10, 100, "station_network.txt", "packages.txt")
+    generate_files(20, 100, "station_network.txt", "packages.txt")
 
