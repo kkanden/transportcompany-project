@@ -42,6 +42,7 @@ class StationNetwork(Graph):
         stat_id : str
             unique station ID
         """
+        
         new_station = Station(stat_id)
         self.stat_list[stat_id] = new_station
 
@@ -78,25 +79,30 @@ class StationNetwork(Graph):
         stat_id : str
             ID of station
         """
+        
         return self.stat_list[stat_id]
 
     def get_stations(self):
         """Station equivalent of get_vertices"""
+        
         return self.stat_list.keys()
 
     def update_packages(self, clock):
         """Invokes update_packages method on all Stations in stat_list"""
+        
         for station in self.stat_list.values():
             station.update_packages(clock)
 
     def reset_packages(self):
         """Invokes reset_packages method on all Stations in stat_list"""
+        
         for station in self.stat_list.values():
             station.reset_packages()
 
     def is_empty(self):
         """Invokes is_empty method on all Stations in stat_list, if all are empty
         returns True, returns False otherwise"""
+        
         for stat_id in self.get_stations():
             station = self.get_station(stat_id)
             if not station.is_empty():
@@ -105,6 +111,7 @@ class StationNetwork(Graph):
 
     def num_packages_left(self):
         """Returns the number of packages left in network"""
+        
         n = 0
         for station in self.stat_list.values():
             n += len(station.packages_time) + len(station.available_packages)
@@ -112,6 +119,7 @@ class StationNetwork(Graph):
 
     def create_network(self):
         """Creates the network using stations_file given at initialization"""
+        
         with open(self.stations_file, 'r') as f:
             for line in f:
                 line = line.strip().split()
@@ -121,7 +129,6 @@ class StationNetwork(Graph):
         for k in self.vert_list.keys():
             dij = Dijkstra(self)
             dij.dijkstra(k)
-            #print(dij.distances)
             distances_sorted = dict(sorted(dij.distances.items(), key=lambda item: item[1]))
             self.stat_list[k].distances = distances_sorted
 

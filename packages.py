@@ -18,6 +18,7 @@ class Packages:
     Methods 
     -------
     """
+    
     def __init__(self, packages_file):
         """
         Parameters
@@ -27,6 +28,7 @@ class Packages:
             following format: unique ID, ID of source station, ID of destination,
             time (HH:MM) of availability at source station 
         """
+        
         self.packages_file = packages_file
         self.packages = {}
         self.create_packages()
@@ -72,9 +74,11 @@ class Packages:
         pack_id : str
             unique ID of package
         """
+        
         return self.packages[pack_id]
 
     def get_packages(self):
         """Returns all instances of Package from packages attribute"""
+        
         return self.packages.keys()
 

@@ -35,8 +35,7 @@ class TransportCompany:
         self.stationnet = StationNetwork(stations_file)
         self.packages = Packages(packages_file)
         self.distribute_packages()
-        # self.stationnet.update_packages(dt.timedelta(hours=6))
-
+ 
     def distribute_packages(self):
         """Parses through all instances of Package in packages attribute and assigns them
         to their appropriate source station"""
@@ -68,6 +67,9 @@ class TransportCompany:
         Once the Driver finishes work (conditions in 2. are not met), their itinerary is added to a dictionary containing all
         itineraries.
         
+        This implemntation has its flaws. For one, it is possible for a loop iteration to create an "empty" Driver itinerary (a Driver that does not deliver a single package).
+        Within this code paradigm, it is not exactly possible to fully prevent this from happening. To cope with this, if a Driver does not deliver a single package,
+        their itinerary is ignored and removed. 
         
         Parameters
         __________  
@@ -85,8 +87,8 @@ class TransportCompany:
                     driver.can_travel_anywhere(): # driver works for max 8h or until 24:00
                 self.stationnet.update_packages(driver.clock)
 
-                if driver.current_station.has_available_packages(): #if possible, pick up package from here and travel
-                    print("*driver picks up from current station*")
+                if driver.current_station.has_available_packages(): # if possible, pick up package from here and travel
+                    # print("*driver picks up from current station*")
                     driver.pickup_and_travel()
 
                 else: # check if better to wait here or travel to the closest station with available package (waiting preferred)
@@ -103,13 +105,14 @@ class TransportCompany:
                                 travel_time = min(stat.when_next_package() - driver.clock, travel_time)
                                 #stat = None
 
-                    if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1) or stat is None:
+                    if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1):
                         break
+                    
                     if wait_time <= travel_time:
                         # if driver.work_time_remaining - wait_time <= dt.timedelta() or wait_time > dt.timedelta(hours=8) or\
                         #     driver.clock + wait_time >= dt.timedelta(days=1):
                         #     break
-                        print('*driver waits*')
+                        # print('*driver waits*')
                         if driver.itinerary: # if it's not driver's first action
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
                             driver.pass_time(wait_time.seconds // 60)
@@ -122,7 +125,7 @@ class TransportCompany:
                     else:
                         if not driver.itinerary:
                             driver.itinerary.append(f"[{driver.clock_print()}]: START work at station {driver.current_station.get_id()}")
-                        print("*driver travels elsewhere*")
+                        # print("*driver travels elsewhere*")
                         driver.itinerary.append(f"[{driver.clock_print()}]: TRAVEL to station {stat.id} from {driver.current_station.get_id()}")
                         driver.travel_to(stat.id)
                         driver.itinerary.append(f"[{driver.clock_print()}]: ARRIVE at station {driver.current_station.get_id()}")
@@ -135,7 +138,6 @@ class TransportCompany:
                             driver.current_station.update_packages(driver.clock)
                         driver.pickup_and_travel()
 
-                #print(driver.itinerary)
 
             driver.itinerary.append(f"[{driver.clock_print()}]: FINISH work at station {driver.current_station.id}")
             total_worktime = dt.timedelta(hours=8) - driver.work_time_remaining
@@ -146,9 +148,9 @@ class TransportCompany:
                 del itineraries[k]
                 #k -= 1
             self.stationnet.reset_packages()
-            print(self.stationnet.num_packages_left())
+            # print(self.stationnet.num_packages_left())
+            # print("----------------")
             k += 1
-            print("----------------")
             
         if wtf:
             with open("driver itineraries", "w") as f:

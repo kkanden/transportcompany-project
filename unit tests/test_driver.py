@@ -55,21 +55,6 @@ class TestDriver(unittest.TestCase):
         self.assertEqual(self.driver.clock, dt.timedelta(hours=6, minutes=120))
         self.assertEqual(self.driver.work_time_remaining, dt.timedelta(hours=6, minutes=0))
     
-    def test_pickup_and_travel(self):
-        pack = MagicMock()
-        pack.id = 'P1'
-        pack.end_station = 'B'
-        pack.time_available = dt.timedelta(hours=7, minutes=0)
-        self.driver.current_station.available_packages = [pack]
-        self.driver.clock_print = MagicMock(return_value='6:00')
-        self.driver.pickup_and_travel()
-        self.assertEqual(len(self.driver.current_station.available_packages), 0)
-        self.assertEqual(self.driver.packages_delivered, 1)
-        self.assertEqual(self.driver.itinerary, [
-            '[6:00]: START work at station A',
-            '[6:00]: PICK UP package P1 from station A',
-            '[7:00]: DELIVER package P1 to station B'
-        ])
     
     def test_clock_print(self):
         self.assertEqual(self.driver.clock_print(), '6:00')

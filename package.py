@@ -17,6 +17,7 @@ class Package:
     Methods
     --------
     """
+    
     def __init__(self, id, start, end, time):
         """ 
         
@@ -32,6 +33,7 @@ class Package:
             time given in HH:MM format representing the time the package
             will be available at source station
         """
+        
         self.id = id
         self.start_station = start
         self.end_station = end

@@ -36,6 +36,7 @@ class Driver:
         stationnet : StationNetwork
             instance of StationNetwork the driver lives inside of
         """
+        
         self.id = driver_id
         self.stationnet = stationnet
         self.current_station = random.choice(list(stationnet.stat_list.values()))
@@ -89,8 +90,13 @@ class Driver:
             instance of Package to be taken
         """
         
-        index = self.current_station.available_packages.index(pack)
-        self.current_station.available_packages.pop(index)
+        index = -1
+        for i, available_pack in enumerate(self.current_station.available_packages):
+            if available_pack.id == pack.id:
+                index = i
+                break
+        if index != -1:
+            self.current_station.available_packages.pop(index)
 
     def travel_to(self, stat_id):
         """Changes driver's current station to station given and passes an appropriate
@@ -111,6 +117,7 @@ class Driver:
         """Picks up the first available package from current station and travels to
         package's destination invoking the take_package and travel_to methods
         """
+        
         l = self.current_station.available_packages
         # pack = l[0]
         for pack in l:
@@ -126,4 +133,5 @@ class Driver:
 
     def clock_print(self):
         """Prints driver's current time in HH:MM format"""
+        
         return str(self.clock)[:-3]

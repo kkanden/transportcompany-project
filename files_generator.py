@@ -20,6 +20,7 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
     file_name_pack : str
         path to file to generate packages information to 
     """
+    
     assert n_stations > 1
     assert n_packages > 0
     stat_ids = ["POL" + str(k) for k in range(n_stations)]
@@ -75,5 +76,5 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
 
 
 if __name__ == "__main__":
-    generate_files(20, 100, "station_network.txt", "packages.txt")
+    generate_files(50, 1000, "station_network.txt", "packages.txt")
 
