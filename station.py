@@ -112,7 +112,7 @@ class Station(Vertex):
         """
         
         if not self.packages_time:
-            return dt.timedelta.max
+            return dt.timedelta(days=100)
         return self.packages_time[0].time_available
 
     def distance_to(self, stat_id):

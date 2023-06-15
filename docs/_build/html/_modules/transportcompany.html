@@ -106,8 +106,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stationnet</span> <span class="o">=</span> <span class="n">StationNetwork</span><span class="p">(</span><span class="n">stations_file</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">packages</span> <span class="o">=</span> <span class="n">Packages</span><span class="p">(</span><span class="n">packages_file</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">distribute_packages</span><span class="p">()</span>
-        <span class="c1"># self.stationnet.update_packages(dt.timedelta(hours=6))</span>
-
+ 
 <div class="viewcode-block" id="TransportCompany.distribute_packages"><a class="viewcode-back" href="../transportcompany.html#transportcompany.TransportCompany.distribute_packages">[docs]</a>    <span class="k">def</span> <span class="nf">distribute_packages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Parses through all instances of Package in packages attribute and assigns them</span>
 <span class="sd">        to their appropriate source station&quot;&quot;&quot;</span>
@@ -139,6 +138,9 @@
 <span class="sd">        Once the Driver finishes work (conditions in 2. are not met), their itinerary is added to a dictionary containing all</span>
 <span class="sd">        itineraries.</span>
 <span class="sd">        </span>
+<span class="sd">        This implemntation has its flaws. For one, it is possible for a loop iteration to create an &quot;empty&quot; Driver itinerary (a Driver that does not deliver a single package).</span>
+<span class="sd">        Within this code paradigm, it is not exactly possible to fully prevent this from happening. To cope with this, if a Driver does not deliver a single package,</span>
+<span class="sd">        their itinerary is ignored and removed. </span>
 <span class="sd">        </span>
 <span class="sd">        Parameters</span>
 <span class="sd">        __________  </span>
@@ -156,8 +158,8 @@
                     <span class="n">driver</span><span class="o">.</span><span class="n">can_travel_anywhere</span><span class="p">():</span> <span class="c1"># driver works for max 8h or until 24:00</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">stationnet</span><span class="o">.</span><span class="n">update_packages</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">clock</span><span class="p">)</span>
 
-                <span class="k">if</span> <span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">has_available_packages</span><span class="p">():</span> <span class="c1">#if possible, pick up package from here and travel</span>
-                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*driver picks up from current station*&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">has_available_packages</span><span class="p">():</span> <span class="c1"># if possible, pick up package from here and travel</span>
+                    <span class="c1"># print(&quot;*driver picks up from current station*&quot;)</span>
                     <span class="n">driver</span><span class="o">.</span><span class="n">pickup_and_travel</span><span class="p">()</span>
 
                 <span class="k">else</span><span class="p">:</span> <span class="c1"># check if better to wait here or travel to the closest station with available package (waiting preferred)</span>
@@ -166,21 +168,23 @@
                     <span class="n">stat</span> <span class="o">=</span> <span class="kc">None</span>
                     <span class="k">for</span> <span class="n">stat_id</span><span class="p">,</span> <span class="n">distance</span> <span class="ow">in</span> <span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># distances are sorted nondecreasing</span>
                         <span class="n">stat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stationnet</span><span class="o">.</span><span class="n">get_station</span><span class="p">(</span><span class="n">stat_id</span><span class="p">)</span>
-                        <span class="k">if</span> <span class="ow">not</span> <span class="n">stat</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
-                            <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">will_have_available_packages</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">clock</span> <span class="o">+</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">distance</span><span class="p">)):</span>
-                                <span class="n">travel_time</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">distance</span><span class="p">)</span>
-                                <span class="k">break</span> <span class="c1"># break because this will be minimal time</span>
-                            <span class="k">else</span><span class="p">:</span>
-                                <span class="n">travel_time</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">when_next_package</span><span class="p">()</span> <span class="o">-</span> <span class="n">driver</span><span class="o">.</span><span class="n">clock</span><span class="p">,</span> <span class="n">travel_time</span><span class="p">)</span>
-                                <span class="c1">#stat = None</span>
+                        <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
+                            <span class="k">continue</span>
+                        
+                        <span class="k">if</span> <span class="n">stat</span><span class="o">.</span><span class="n">will_have_available_packages</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">clock</span> <span class="o">+</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">distance</span><span class="p">)):</span>
+                            <span class="n">travel_time</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">distance</span><span class="p">)</span>
+                            <span class="k">break</span> <span class="c1"># break because this will be minimal time</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">travel_time</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">when_next_package</span><span class="p">()</span> <span class="o">-</span> <span class="n">driver</span><span class="o">.</span><span class="n">clock</span><span class="p">,</span> <span class="n">travel_time</span><span class="p">)</span>
+                            <span class="c1">#stat = None</span>
 
-                    <span class="k">if</span> <span class="n">wait_time</span> <span class="o">&gt;</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">travel_time</span> <span class="o">&gt;</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">stat</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-                        <span class="k">break</span>
+                    <span class="c1"># if wait_time &gt; dt.timedelta(days=1) and travel_time &gt; dt.timedelta(days=1):</span>
+                    <span class="c1">#     break</span>
+                    
                     <span class="k">if</span> <span class="n">wait_time</span> <span class="o">&lt;=</span> <span class="n">travel_time</span><span class="p">:</span>
-                        <span class="c1"># if driver.work_time_remaining - wait_time &lt;= dt.timedelta() or wait_time &gt; dt.timedelta(hours=8) or\</span>
-                        <span class="c1">#     driver.clock + wait_time &gt;= dt.timedelta(days=1):</span>
-                        <span class="c1">#     break</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*driver waits*&#39;</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="n">driver</span><span class="o">.</span><span class="n">clock</span> <span class="o">+</span> <span class="n">wait_time</span> <span class="o">&gt;=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">59</span><span class="p">):</span>
+                            <span class="k">break</span>
+                        <span class="c1"># print(&#39;*driver waits*&#39;)</span>
                         <span class="k">if</span> <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="p">:</span> <span class="c1"># if it&#39;s not driver&#39;s first action</span>
                             <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">clock_print</span><span class="p">()</span><span class="si">}</span><span class="s2">]: WAIT at station </span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">wait_time</span><span class="o">.</span><span class="n">seconds</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="mi">60</span><span class="si">}</span><span class="s2"> minutes&quot;</span><span class="p">)</span>
                             <span class="n">driver</span><span class="o">.</span><span class="n">pass_time</span><span class="p">(</span><span class="n">wait_time</span><span class="o">.</span><span class="n">seconds</span> <span class="o">//</span> <span class="mi">60</span><span class="p">)</span>
@@ -193,7 +197,7 @@
                     <span class="k">else</span><span class="p">:</span>
                         <span class="k">if</span> <span class="ow">not</span> <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="p">:</span>
                             <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">clock_print</span><span class="p">()</span><span class="si">}</span><span class="s2">]: START work at station </span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-                        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;*driver travels elsewhere*&quot;</span><span class="p">)</span>
+                        <span class="c1"># print(&quot;*driver travels elsewhere*&quot;)</span>
                         <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">clock_print</span><span class="p">()</span><span class="si">}</span><span class="s2">]: TRAVEL to station </span><span class="si">{</span><span class="n">stat</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> from </span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                         <span class="n">driver</span><span class="o">.</span><span class="n">travel_to</span><span class="p">(</span><span class="n">stat</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
                         <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">clock_print</span><span class="p">()</span><span class="si">}</span><span class="s2">]: ARRIVE at station </span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">get_id</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -206,7 +210,6 @@
                             <span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">update_packages</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">clock</span><span class="p">)</span>
                         <span class="n">driver</span><span class="o">.</span><span class="n">pickup_and_travel</span><span class="p">()</span>
 
-                <span class="c1">#print(driver.itinerary)</span>
 
             <span class="n">driver</span><span class="o">.</span><span class="n">itinerary</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">clock_print</span><span class="p">()</span><span class="si">}</span><span class="s2">]: FINISH work at station </span><span class="si">{</span><span class="n">driver</span><span class="o">.</span><span class="n">current_station</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="n">total_worktime</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="o">-</span> <span class="n">driver</span><span class="o">.</span><span class="n">work_time_remaining</span>
@@ -217,9 +220,9 @@
                 <span class="k">del</span> <span class="n">itineraries</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
                 <span class="c1">#k -= 1</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">stationnet</span><span class="o">.</span><span class="n">reset_packages</span><span class="p">()</span>
-            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stationnet</span><span class="o">.</span><span class="n">num_packages_left</span><span class="p">())</span>
+            <span class="c1"># print(self.stationnet.num_packages_left())</span>
+            <span class="c1"># print(&quot;----------------&quot;)</span>
             <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----------------&quot;</span><span class="p">)</span>
             
         <span class="k">if</span> <span class="n">wtf</span><span class="p">:</span>
             <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;driver itineraries&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>

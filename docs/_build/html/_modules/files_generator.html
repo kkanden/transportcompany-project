@@ -91,11 +91,12 @@
 <span class="sd">    file_name_pack : str</span>
 <span class="sd">        path to file to generate packages information to </span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    
     <span class="k">assert</span> <span class="n">n_stations</span> <span class="o">&gt;</span> <span class="mi">1</span>
     <span class="k">assert</span> <span class="n">n_packages</span> <span class="o">&gt;</span> <span class="mi">0</span>
     <span class="n">stat_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;POL&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_stations</span><span class="p">)]</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name_pack</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_packages</span> <span class="o">//</span> <span class="mi">4</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_packages</span> <span class="o">//</span> <span class="mi">3</span><span class="p">):</span>
             <span class="n">package_id</span> <span class="o">=</span> <span class="n">k</span>
             <span class="n">start</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">stat_ids</span><span class="p">)</span>
             <span class="n">end</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">stat_ids</span><span class="p">)</span>
@@ -140,13 +141,13 @@
             <span class="n">distance</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
             <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">station1</span><span class="p">,</span> <span class="n">station2</span><span class="p">,</span> <span class="n">distance</span><span class="p">))</span>
 
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name_stat</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name_stat</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">distance</span> <span class="ow">in</span> <span class="n">distances</span><span class="p">:</span>
-            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">distance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">distance</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">distance</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">distance</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">distance</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">generate_files</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;station_network.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;packages.txt&quot;</span><span class="p">)</span>
+    <span class="n">generate_files</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;station_network.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;packages.txt&quot;</span><span class="p">)</span>
 
 </pre></div>
 

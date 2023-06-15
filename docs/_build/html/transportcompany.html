@@ -135,6 +135,9 @@ classes are used</p>
 </ol>
 <p>Once the Driver finishes work (conditions in 2. are not met), their itinerary is added to a dictionary containing all
 itineraries.</p>
+<p>This implemntation has its flaws. For one, it is possible for a loop iteration to create an “empty” Driver itinerary (a Driver that does not deliver a single package).
+Within this code paradigm, it is not exactly possible to fully prevent this from happening. To cope with this, if a Driver does not deliver a single package,
+their itinerary is ignored and removed.</p>
 <section id="parameters">
 <h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h3>
 <dl class="simple">

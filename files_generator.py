@@ -25,7 +25,7 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
     assert n_packages > 0
     stat_ids = ["POL" + str(k) for k in range(n_stations)]
     with open(file_name_pack, "w") as f:
-        for k in range(n_packages // 4):
+        for k in range(n_packages // 3):
             package_id = k
             start = random.choice(stat_ids)
             end = random.choice(stat_ids)
@@ -70,11 +70,11 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
             distance = random.randint(10, 40)
             distances.append((station1, station2, distance))
 
-    with open(file_name_stat, "w") as file:
+    with open(file_name_stat, "w") as f:
         for distance in distances:
-            file.write(f"{distance[0]} {distance[1]} {distance[2]}\n")
+            f.write(f"{distance[0]} {distance[1]} {distance[2]}\n")
 
 
 if __name__ == "__main__":
-    generate_files(50, 1000, "station_network.txt", "packages.txt")
+    generate_files(50, 2000, "station_network.txt", "packages.txt")
 

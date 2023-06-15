@@ -97,21 +97,22 @@ class TransportCompany:
                     stat = None
                     for stat_id, distance in driver.current_station.distances.items(): # distances are sorted nondecreasing
                         stat = self.stationnet.get_station(stat_id)
-                        if not stat.is_empty():
-                            if stat.will_have_available_packages(driver.clock + dt.timedelta(minutes=distance)):
-                                travel_time = dt.timedelta(minutes=distance)
-                                break # break because this will be minimal time
-                            else:
-                                travel_time = min(stat.when_next_package() - driver.clock, travel_time)
-                                #stat = None
+                        if stat.is_empty():
+                            continue
+                        
+                        if stat.will_have_available_packages(driver.clock + dt.timedelta(minutes=distance)):
+                            travel_time = dt.timedelta(minutes=distance)
+                            break # break because this will be minimal time
+                        else:
+                            travel_time = min(stat.when_next_package() - driver.clock, travel_time)
+                            #stat = None
 
-                    if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1):
-                        break
+                    # if wait_time > dt.timedelta(days=1) and travel_time > dt.timedelta(days=1):
+                    #     break
                     
                     if wait_time <= travel_time:
-                        # if driver.work_time_remaining - wait_time <= dt.timedelta() or wait_time > dt.timedelta(hours=8) or\
-                        #     driver.clock + wait_time >= dt.timedelta(days=1):
-                        #     break
+                        if driver.clock + wait_time >= dt.timedelta(hours=23, minutes=59):
+                            break
                         # print('*driver waits*')
                         if driver.itinerary: # if it's not driver's first action
                             driver.itinerary.append(f"[{driver.clock_print()}]: WAIT at station {driver.current_station.id} for {wait_time.seconds // 60} minutes")
