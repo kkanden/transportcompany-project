@@ -20,7 +20,8 @@ author = 'oliwka'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',  # Supports Google-style and NumPy-style docstrings
-    'sphinx.ext.viewcode'  # Adds links to source code
+    'sphinx.ext.viewcode',  # Adds links to source code
+    'sphinx.ext.githubpages' # Fix GitHub pages style
 ]
 
 templates_path = ['_templates']
