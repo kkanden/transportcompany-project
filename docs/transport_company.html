@@ -1,261 +1,236 @@
-<!doctype html>
-<html class="no-js" lang="en" data-content_root="">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Welcome to Transport Company’s documentation!" href="index.html" />
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <!-- Generated with Sphinx 6.2.1 and Furo 2024.08.06 -->
-        <title>transport_company package - Transport Company documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=04c057b233f3c8d71940eee6080f658a04e2027d" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=cf727022eb7470bc603c08d2e55c3247faec75c9" />
-    
-    
-
-
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>transport_company package &mdash; Transport Company  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style></head>
-  <body>
-    
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Transport Company’s documentation!" href="index.html" /> 
+</head>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
-    <title>Auto light/dark, in light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
-      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
-      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
-      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
-      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
-      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
-      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
-      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
-      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
-      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
-      <circle cx="14.5" cy="9.55" r="3.6"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
-    <title>Auto light/dark, in dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
-      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
-      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
-      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
-      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
-      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
-      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
-      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
-      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
-      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
-      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-pencil" viewBox="0 0 24 24">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
-      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
-      <path d="M13.5 6.5l4 4" />
-      <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" />
-    </svg>
-  </symbol>
-  <symbol id="svg-eye" viewBox="0 0 24 24">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-      <path
-        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
-      <path d="M20 21l2 -2l-2 -2" />
-      <path d="M17 17l-2 2l2 2" />
-    </svg>
-  </symbol>
-</svg>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
-
-<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="index.html"><div class="brand">Transport Company  documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
-          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
-  
-  
-  <span class="sidebar-brand-text">Transport Company  documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Transport Company
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">transport_company package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">transport_company package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.driver">transport_company.driver module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.driver.Driver"><code class="docutils literal notranslate"><span class="pre">Driver</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.id"><code class="docutils literal notranslate"><span class="pre">Driver.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.stationnet"><code class="docutils literal notranslate"><span class="pre">Driver.stationnet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.current_station"><code class="docutils literal notranslate"><span class="pre">Driver.current_station</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.clock"><code class="docutils literal notranslate"><span class="pre">Driver.clock</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.work_time_remaining"><code class="docutils literal notranslate"><span class="pre">Driver.work_time_remaining</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.packages_delivered"><code class="docutils literal notranslate"><span class="pre">Driver.packages_delivered</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.itinerary"><code class="docutils literal notranslate"><span class="pre">Driver.itinerary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.can_travel_anywhere"><code class="docutils literal notranslate"><span class="pre">Driver.can_travel_anywhere()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.can_travel_to"><code class="docutils literal notranslate"><span class="pre">Driver.can_travel_to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.clock_print"><code class="docutils literal notranslate"><span class="pre">Driver.clock_print()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.pass_time"><code class="docutils literal notranslate"><span class="pre">Driver.pass_time()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.pickup_and_travel"><code class="docutils literal notranslate"><span class="pre">Driver.pickup_and_travel()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.take_package"><code class="docutils literal notranslate"><span class="pre">Driver.take_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.driver.Driver.travel_to"><code class="docutils literal notranslate"><span class="pre">Driver.travel_to()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.files_generator">transport_company.files_generator module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.files_generator.generate_files"><code class="docutils literal notranslate"><span class="pre">generate_files()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.package">transport_company.package module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.package.Package"><code class="docutils literal notranslate"><span class="pre">Package</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.package.Package.id"><code class="docutils literal notranslate"><span class="pre">Package.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.package.Package.start_station"><code class="docutils literal notranslate"><span class="pre">Package.start_station</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.package.Package.end_station"><code class="docutils literal notranslate"><span class="pre">Package.end_station</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.package.Package.time_available"><code class="docutils literal notranslate"><span class="pre">Package.time_available</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.packages">transport_company.packages module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.packages.Packages"><code class="docutils literal notranslate"><span class="pre">Packages</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.packages.Packages.packages_file"><code class="docutils literal notranslate"><span class="pre">Packages.packages_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.packages.Packages.packages"><code class="docutils literal notranslate"><span class="pre">Packages.packages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.packages.Packages.add_package"><code class="docutils literal notranslate"><span class="pre">Packages.add_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.packages.Packages.create_packages"><code class="docutils literal notranslate"><span class="pre">Packages.create_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.packages.Packages.get_package"><code class="docutils literal notranslate"><span class="pre">Packages.get_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.packages.Packages.get_packages"><code class="docutils literal notranslate"><span class="pre">Packages.get_packages()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.station">transport_company.station module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.station.Station"><code class="docutils literal notranslate"><span class="pre">Station</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.station_id"><code class="docutils literal notranslate"><span class="pre">Station.station_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.packages_time"><code class="docutils literal notranslate"><span class="pre">Station.packages_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.available_packages"><code class="docutils literal notranslate"><span class="pre">Station.available_packages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.distances"><code class="docutils literal notranslate"><span class="pre">Station.distances</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.add_package"><code class="docutils literal notranslate"><span class="pre">Station.add_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.distance_to"><code class="docutils literal notranslate"><span class="pre">Station.distance_to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.has_available_packages"><code class="docutils literal notranslate"><span class="pre">Station.has_available_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.is_empty"><code class="docutils literal notranslate"><span class="pre">Station.is_empty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.reset_packages"><code class="docutils literal notranslate"><span class="pre">Station.reset_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.update_packages"><code class="docutils literal notranslate"><span class="pre">Station.update_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.when_next_package"><code class="docutils literal notranslate"><span class="pre">Station.when_next_package()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.station.Station.will_have_available_packages"><code class="docutils literal notranslate"><span class="pre">Station.will_have_available_packages()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.stationnetwork">transport_company.stationnetwork module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork"><code class="docutils literal notranslate"><span class="pre">StationNetwork</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.stations_file"><code class="docutils literal notranslate"><span class="pre">StationNetwork.stations_file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.stat_list"><code class="docutils literal notranslate"><span class="pre">StationNetwork.stat_list</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.add_edge"><code class="docutils literal notranslate"><span class="pre">StationNetwork.add_edge()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.add_station"><code class="docutils literal notranslate"><span class="pre">StationNetwork.add_station()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.create_network"><code class="docutils literal notranslate"><span class="pre">StationNetwork.create_network()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.get_station"><code class="docutils literal notranslate"><span class="pre">StationNetwork.get_station()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.get_stations"><code class="docutils literal notranslate"><span class="pre">StationNetwork.get_stations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.is_empty"><code class="docutils literal notranslate"><span class="pre">StationNetwork.is_empty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.num_packages_left"><code class="docutils literal notranslate"><span class="pre">StationNetwork.num_packages_left()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.reset_packages"><code class="docutils literal notranslate"><span class="pre">StationNetwork.reset_packages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.update_packages"><code class="docutils literal notranslate"><span class="pre">StationNetwork.update_packages()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.structures">transport_company.structures module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.structures.BFS"><code class="docutils literal notranslate"><span class="pre">BFS</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.BFS.bfs"><code class="docutils literal notranslate"><span class="pre">BFS.bfs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.BFS.clear"><code class="docutils literal notranslate"><span class="pre">BFS.clear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.BFS.traverse"><code class="docutils literal notranslate"><span class="pre">BFS.traverse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.structures.Dijkstra"><code class="docutils literal notranslate"><span class="pre">Dijkstra</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Dijkstra.clear"><code class="docutils literal notranslate"><span class="pre">Dijkstra.clear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Dijkstra.dijkstra"><code class="docutils literal notranslate"><span class="pre">Dijkstra.dijkstra()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.structures.Graph"><code class="docutils literal notranslate"><span class="pre">Graph</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Graph.add_edge"><code class="docutils literal notranslate"><span class="pre">Graph.add_edge()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Graph.add_vertex"><code class="docutils literal notranslate"><span class="pre">Graph.add_vertex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Graph.get_vertex"><code class="docutils literal notranslate"><span class="pre">Graph.get_vertex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Graph.get_vertices"><code class="docutils literal notranslate"><span class="pre">Graph.get_vertices()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.structures.MinHeap"><code class="docutils literal notranslate"><span class="pre">MinHeap</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.decrease_key"><code class="docutils literal notranslate"><span class="pre">MinHeap.decrease_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.decrease_key_at_index"><code class="docutils literal notranslate"><span class="pre">MinHeap.decrease_key_at_index()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.extract_min"><code class="docutils literal notranslate"><span class="pre">MinHeap.extract_min()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.heapify_down"><code class="docutils literal notranslate"><span class="pre">MinHeap.heapify_down()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.heapify_up"><code class="docutils literal notranslate"><span class="pre">MinHeap.heapify_up()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.insert_key"><code class="docutils literal notranslate"><span class="pre">MinHeap.insert_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.is_empty"><code class="docutils literal notranslate"><span class="pre">MinHeap.is_empty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.left_child"><code class="docutils literal notranslate"><span class="pre">MinHeap.left_child()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.parent"><code class="docutils literal notranslate"><span class="pre">MinHeap.parent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.peek"><code class="docutils literal notranslate"><span class="pre">MinHeap.peek()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.right_child"><code class="docutils literal notranslate"><span class="pre">MinHeap.right_child()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.MinHeap.size"><code class="docutils literal notranslate"><span class="pre">MinHeap.size()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.structures.Stack"><code class="docutils literal notranslate"><span class="pre">Stack</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Stack.is_empty"><code class="docutils literal notranslate"><span class="pre">Stack.is_empty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Stack.peek"><code class="docutils literal notranslate"><span class="pre">Stack.peek()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Stack.pop"><code class="docutils literal notranslate"><span class="pre">Stack.pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Stack.push"><code class="docutils literal notranslate"><span class="pre">Stack.push()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Stack.size"><code class="docutils literal notranslate"><span class="pre">Stack.size()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.structures.Vertex"><code class="docutils literal notranslate"><span class="pre">Vertex</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Vertex.add_neighbor"><code class="docutils literal notranslate"><span class="pre">Vertex.add_neighbor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Vertex.get_connections"><code class="docutils literal notranslate"><span class="pre">Vertex.get_connections()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Vertex.get_id"><code class="docutils literal notranslate"><span class="pre">Vertex.get_id()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.structures.Vertex.get_weight"><code class="docutils literal notranslate"><span class="pre">Vertex.get_weight()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company.transportcompany">transport_company.transportcompany module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#transport_company.transportcompany.TransportCompany"><code class="docutils literal notranslate"><span class="pre">TransportCompany</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.stationnet"><code class="docutils literal notranslate"><span class="pre">TransportCompany.stationnet</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.packages"><code class="docutils literal notranslate"><span class="pre">TransportCompany.packages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.create_itineraries"><code class="docutils literal notranslate"><span class="pre">TransportCompany.create_itineraries()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.distribute_packages"><code class="docutils literal notranslate"><span class="pre">TransportCompany.distribute_packages()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-transport_company">Module contents</a></li>
+</ul>
+</li>
 </ul>
 
-</div>
-</div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          <div class="view-this-page">
-  <a class="muted-link" href="_sources/transport_company.rst.txt" title="View this page">
-    <svg><use href="#svg-eye"></use></svg>
-    <span class="visually-hidden">View this page</span>
-  </a>
-</div>
-<div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
-              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
         </div>
-        <article role="main" id="furo-main-content">
-          <section id="transport-company-package">
-<h1>transport_company package<a class="headerlink" href="#transport-company-package" title="Permalink to this heading">¶</a></h1>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Transport Company</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">transport_company package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/transport_company.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="transport-company-package">
+<h1>transport_company package<a class="headerlink" href="#transport-company-package" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-transport_company.driver">
-<span id="transport-company-driver-module"></span><h2>transport_company.driver module<a class="headerlink" href="#module-transport_company.driver" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-driver-module"></span><h2>transport_company.driver module<a class="headerlink" href="#module-transport_company.driver" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.driver.Driver">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.driver.</span></span><span class="sig-name descname"><span class="pre">Driver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stationnet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork" title="transport_company.stationnetwork.StationNetwork"><span class="pre">StationNetwork</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.driver.</span></span><span class="sig-name descname"><span class="pre">Driver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stationnet</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork" title="transport_company.stationnetwork.StationNetwork"><span class="pre">StationNetwork</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing a Driver.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#transport_company.driver.Driver.id" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#transport_company.driver.Driver.id" title="Permalink to this definition"></a></dt>
 <dd><p>unique ID of driver</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -266,7 +241,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.stationnet">
-<span class="sig-name descname"><span class="pre">stationnet</span></span><a class="headerlink" href="#transport_company.driver.Driver.stationnet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stationnet</span></span><a class="headerlink" href="#transport_company.driver.Driver.stationnet" title="Permalink to this definition"></a></dt>
 <dd><p>instance of StationNetwork the driver lives inside of</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -277,7 +252,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.current_station">
-<span class="sig-name descname"><span class="pre">current_station</span></span><a class="headerlink" href="#transport_company.driver.Driver.current_station" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">current_station</span></span><a class="headerlink" href="#transport_company.driver.Driver.current_station" title="Permalink to this definition"></a></dt>
 <dd><p>instance of Station the driver is currently in; at instantiation station is chosen randomly</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -288,7 +263,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.clock">
-<span class="sig-name descname"><span class="pre">clock</span></span><a class="headerlink" href="#transport_company.driver.Driver.clock" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clock</span></span><a class="headerlink" href="#transport_company.driver.Driver.clock" title="Permalink to this definition"></a></dt>
 <dd><p>driver’s current time, at instantiation set to 6:00 AM</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -299,7 +274,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.work_time_remaining">
-<span class="sig-name descname"><span class="pre">work_time_remaining</span></span><a class="headerlink" href="#transport_company.driver.Driver.work_time_remaining" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">work_time_remaining</span></span><a class="headerlink" href="#transport_company.driver.Driver.work_time_remaining" title="Permalink to this definition"></a></dt>
 <dd><p>at instantiation set to 8 hours</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -310,7 +285,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.packages_delivered">
-<span class="sig-name descname"><span class="pre">packages_delivered</span></span><a class="headerlink" href="#transport_company.driver.Driver.packages_delivered" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">packages_delivered</span></span><a class="headerlink" href="#transport_company.driver.Driver.packages_delivered" title="Permalink to this definition"></a></dt>
 <dd><p>number of packages delivered by Driver</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -321,7 +296,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.itinerary">
-<span class="sig-name descname"><span class="pre">itinerary</span></span><a class="headerlink" href="#transport_company.driver.Driver.itinerary" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">itinerary</span></span><a class="headerlink" href="#transport_company.driver.Driver.itinerary" title="Permalink to this definition"></a></dt>
 <dd><p>list of subsequent actions made by the driver at given time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -332,13 +307,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.can_travel_anywhere">
-<span class="sig-name descname"><span class="pre">can_travel_anywhere</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.can_travel_anywhere"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.can_travel_anywhere" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">can_travel_anywhere</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.can_travel_anywhere"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.can_travel_anywhere" title="Permalink to this definition"></a></dt>
 <dd><p>Invokes can_travel_to method on all Stations in network</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.can_travel_to">
-<span class="sig-name descname"><span class="pre">can_travel_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.can_travel_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.can_travel_to" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">can_travel_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.can_travel_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.can_travel_to" title="Permalink to this definition"></a></dt>
 <dd><p>Returns True if distance to Station with given ID is shorter than
 remaining worktime, returns False otherwise</p>
 <dl class="field-list simple">
@@ -350,13 +325,13 @@ remaining worktime, returns False otherwise</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.clock_print">
-<span class="sig-name descname"><span class="pre">clock_print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.clock_print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.clock_print" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clock_print</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.clock_print"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.clock_print" title="Permalink to this definition"></a></dt>
 <dd><p>Prints driver’s current time in HH:MM format</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.pass_time">
-<span class="sig-name descname"><span class="pre">pass_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.pass_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.pass_time" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pass_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minutes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.pass_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.pass_time" title="Permalink to this definition"></a></dt>
 <dd><p>Subtracts given time from work_time_remaining and adds it to clock</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -367,14 +342,14 @@ remaining worktime, returns False otherwise</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.pickup_and_travel">
-<span class="sig-name descname"><span class="pre">pickup_and_travel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.pickup_and_travel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.pickup_and_travel" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pickup_and_travel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.pickup_and_travel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.pickup_and_travel" title="Permalink to this definition"></a></dt>
 <dd><p>Picks up the first available package from current station and travels to
 package’s destination invoking the take_package and travel_to methods</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.take_package">
-<span class="sig-name descname"><span class="pre">take_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#transport_company.package.Package" title="transport_company.package.Package"><span class="pre">Package</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.take_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.take_package" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">take_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pack</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#transport_company.package.Package" title="transport_company.package.Package"><span class="pre">Package</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.take_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.take_package" title="Permalink to this definition"></a></dt>
 <dd><p>Removes given instance of Package from driver’s current station’s
 available packages</p>
 <dl class="field-list simple">
@@ -386,7 +361,7 @@ available packages</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.driver.Driver.travel_to">
-<span class="sig-name descname"><span class="pre">travel_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.travel_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.travel_to" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">travel_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/driver.html#Driver.travel_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.driver.Driver.travel_to" title="Permalink to this definition"></a></dt>
 <dd><p>Changes driver’s current station to station given and passes an appropriate
 amount of time</p>
 <dl class="field-list simple">
@@ -400,10 +375,10 @@ amount of time</p>
 
 </section>
 <section id="module-transport_company.files_generator">
-<span id="transport-company-files-generator-module"></span><h2>transport_company.files_generator module<a class="headerlink" href="#module-transport_company.files_generator" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-files-generator-module"></span><h2>transport_company.files_generator module<a class="headerlink" href="#module-transport_company.files_generator" title="Permalink to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="transport_company.files_generator.generate_files">
-<span class="sig-prename descclassname"><span class="pre">transport_company.files_generator.</span></span><span class="sig-name descname"><span class="pre">generate_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_stations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_packages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_station</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_package</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/files_generator.html#generate_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.files_generator.generate_files" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">transport_company.files_generator.</span></span><span class="sig-name descname"><span class="pre">generate_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_stations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_packages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_station</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name_package</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/files_generator.html#generate_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.files_generator.generate_files" title="Permalink to this definition"></a></dt>
 <dd><p>Generates two text files: one containing information of n_packages packages (unique ID, source station
 destination, time of availability at source station (HH:MM)), the other containing information of a station network
 with n_station Stations (Station1 ID, Station2 ID, distance)</p>
@@ -421,15 +396,15 @@ with n_station Stations (Station1 ID, Station2 ID, distance)</p>
 
 </section>
 <section id="module-transport_company.package">
-<span id="transport-company-package-module"></span><h2>transport_company.package module<a class="headerlink" href="#module-transport_company.package" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-package-module"></span><h2>transport_company.package module<a class="headerlink" href="#module-transport_company.package" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.package.Package">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.package.</span></span><span class="sig-name descname"><span class="pre">Package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_station</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_station</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_available</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/package.html#Package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.package.Package" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.package.</span></span><span class="sig-name descname"><span class="pre">Package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_station</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_station</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_available</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/package.html#Package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.package.Package" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing a single package.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.package.Package.id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#transport_company.package.Package.id" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#transport_company.package.Package.id" title="Permalink to this definition"></a></dt>
 <dd><p>a unique package ID</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -440,7 +415,7 @@ with n_station Stations (Station1 ID, Station2 ID, distance)</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.package.Package.start_station">
-<span class="sig-name descname"><span class="pre">start_station</span></span><a class="headerlink" href="#transport_company.package.Package.start_station" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">start_station</span></span><a class="headerlink" href="#transport_company.package.Package.start_station" title="Permalink to this definition"></a></dt>
 <dd><p>ID of source station</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -451,7 +426,7 @@ with n_station Stations (Station1 ID, Station2 ID, distance)</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.package.Package.end_station">
-<span class="sig-name descname"><span class="pre">end_station</span></span><a class="headerlink" href="#transport_company.package.Package.end_station" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">end_station</span></span><a class="headerlink" href="#transport_company.package.Package.end_station" title="Permalink to this definition"></a></dt>
 <dd><p>ID of destination</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -462,7 +437,7 @@ with n_station Stations (Station1 ID, Station2 ID, distance)</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.package.Package.time_available">
-<span class="sig-name descname"><span class="pre">time_available</span></span><a class="headerlink" href="#transport_company.package.Package.time_available" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">time_available</span></span><a class="headerlink" href="#transport_company.package.Package.time_available" title="Permalink to this definition"></a></dt>
 <dd><p>time given in HH:MM format representing the time the package
 will be available at source station</p>
 <dl class="field-list simple">
@@ -476,15 +451,15 @@ will be available at source station</p>
 
 </section>
 <section id="module-transport_company.packages">
-<span id="transport-company-packages-module"></span><h2>transport_company.packages module<a class="headerlink" href="#module-transport_company.packages" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-packages-module"></span><h2>transport_company.packages module<a class="headerlink" href="#module-transport_company.packages" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.packages.Packages">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.packages.</span></span><span class="sig-name descname"><span class="pre">Packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packages_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.packages.</span></span><span class="sig-name descname"><span class="pre">Packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packages_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing all packages present in station network.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.packages.Packages.packages_file">
-<span class="sig-name descname"><span class="pre">packages_file</span></span><a class="headerlink" href="#transport_company.packages.Packages.packages_file" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">packages_file</span></span><a class="headerlink" href="#transport_company.packages.Packages.packages_file" title="Permalink to this definition"></a></dt>
 <dd><p>path to file with packages information each line being in
 following format: unique ID, ID of source station, ID of destination,
 time (HH:MM) of availability at source station</p>
@@ -497,7 +472,7 @@ time (HH:MM) of availability at source station</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.packages.Packages.packages">
-<span class="sig-name descname"><span class="pre">packages</span></span><a class="headerlink" href="#transport_company.packages.Packages.packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">packages</span></span><a class="headerlink" href="#transport_company.packages.Packages.packages" title="Permalink to this definition"></a></dt>
 <dd><p>dictionary with keys being package IDs and values being instances
 of Package class</p>
 <dl class="field-list simple">
@@ -509,7 +484,7 @@ of Package class</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.packages.Packages.add_package">
-<span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_available</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.add_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.add_package" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_station</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_available</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.add_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.add_package" title="Permalink to this definition"></a></dt>
 <dd><p>Creates single instance of Package with given variables and puts it in
 packages attribute</p>
 <dl class="field-list simple">
@@ -527,14 +502,14 @@ will be available at source station</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.packages.Packages.create_packages">
-<span class="sig-name descname"><span class="pre">create_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.create_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.create_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.create_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.create_packages" title="Permalink to this definition"></a></dt>
 <dd><p>creates instances of Package from packages_file and
 puts them inpackages attribute using add_package method</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.packages.Packages.get_package">
-<span class="sig-name descname"><span class="pre">get_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.get_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.get_package" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.get_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.get_package" title="Permalink to this definition"></a></dt>
 <dd><p>Returns instance of Package with given ID</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -545,7 +520,7 @@ puts them inpackages attribute using add_package method</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.packages.Packages.get_packages">
-<span class="sig-name descname"><span class="pre">get_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.get_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.get_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/packages.html#Packages.get_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.packages.Packages.get_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Returns all instances of Package from packages attribute</p>
 </dd></dl>
 
@@ -553,15 +528,15 @@ puts them inpackages attribute using add_package method</p>
 
 </section>
 <section id="module-transport_company.station">
-<span id="transport-company-station-module"></span><h2>transport_company.station module<a class="headerlink" href="#module-transport_company.station" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-station-module"></span><h2>transport_company.station module<a class="headerlink" href="#module-transport_company.station" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.station.Station">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.station.</span></span><span class="sig-name descname"><span class="pre">Station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">station_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.station.</span></span><span class="sig-name descname"><span class="pre">Station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">station_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Vertex</span></code></p>
 <p>Class representing a station. It inherits all properties from Vertex class.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.station.Station.station_id">
-<span class="sig-name descname"><span class="pre">station_id</span></span><a class="headerlink" href="#transport_company.station.Station.station_id" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">station_id</span></span><a class="headerlink" href="#transport_company.station.Station.station_id" title="Permalink to this definition"></a></dt>
 <dd><p>unique ID of station</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -572,7 +547,7 @@ puts them inpackages attribute using add_package method</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.station.Station.packages_time">
-<span class="sig-name descname"><span class="pre">packages_time</span></span><a class="headerlink" href="#transport_company.station.Station.packages_time" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">packages_time</span></span><a class="headerlink" href="#transport_company.station.Station.packages_time" title="Permalink to this definition"></a></dt>
 <dd><p>list of instances of Package that will be available on station,
 sorted non-decreasingly by time of availability</p>
 <dl class="field-list simple">
@@ -584,7 +559,7 @@ sorted non-decreasingly by time of availability</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.station.Station.available_packages">
-<span class="sig-name descname"><span class="pre">available_packages</span></span><a class="headerlink" href="#transport_company.station.Station.available_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">available_packages</span></span><a class="headerlink" href="#transport_company.station.Station.available_packages" title="Permalink to this definition"></a></dt>
 <dd><p>list of instances of Package that are currently available on station,
 sorted non-decreasingly by time of availability by nature of how it is created</p>
 <dl class="field-list simple">
@@ -596,7 +571,7 @@ sorted non-decreasingly by time of availability by nature of how it is created</
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.station.Station.distances">
-<span class="sig-name descname"><span class="pre">distances</span></span><a class="headerlink" href="#transport_company.station.Station.distances" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">distances</span></span><a class="headerlink" href="#transport_company.station.Station.distances" title="Permalink to this definition"></a></dt>
 <dd><p>dictionary of all instances of Station in network and their distance from
 this Station</p>
 <dl class="field-list simple">
@@ -608,7 +583,7 @@ this Station</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.add_package">
-<span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#transport_company.package.Package" title="transport_company.package.Package"><span class="pre">Package</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.add_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.add_package" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#transport_company.package.Package" title="transport_company.package.Package"><span class="pre">Package</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.add_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.add_package" title="Permalink to this definition"></a></dt>
 <dd><p>Adds instance of Package to packages_time attribute and instantly sorts
 non-decreasingly by time</p>
 <dl class="field-list simple">
@@ -620,7 +595,7 @@ non-decreasingly by time</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.distance_to">
-<span class="sig-name descname"><span class="pre">distance_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.distance_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.distance_to" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">distance_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.distance_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.distance_to" title="Permalink to this definition"></a></dt>
 <dd><p>Returns distance to other Station of given ID</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -631,27 +606,27 @@ non-decreasingly by time</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.has_available_packages">
-<span class="sig-name descname"><span class="pre">has_available_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.has_available_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.has_available_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">has_available_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.has_available_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.has_available_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Checks whether Station has any packages in available_packages, returns bool</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.is_empty">
-<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.is_empty" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.is_empty" title="Permalink to this definition"></a></dt>
 <dd><p>Checks whether Station has any packages in packages_time or available_packages,
 returns bool</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.reset_packages">
-<span class="sig-name descname"><span class="pre">reset_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.reset_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.reset_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reset_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.reset_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.reset_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Puts all packages from available_packages back to packages_time and then sorts
 non-decreasingly by time of availability</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.update_packages">
-<span class="sig-name descname"><span class="pre">update_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.update_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.update_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.update_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.update_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Parses through packages_time and adds instance of Package to available_packages
 dictionary if clock is greater than or equal to time of availability of Package,
 then removes that Package from packages_time</p>
@@ -664,13 +639,13 @@ then removes that Package from packages_time</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.when_next_package">
-<span class="sig-name descname"><span class="pre">when_next_package</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.when_next_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.when_next_package" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">when_next_package</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.when_next_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.when_next_package" title="Permalink to this definition"></a></dt>
 <dd><p>Returns time in datetime.timedelta of next available package</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.station.Station.will_have_available_packages">
-<span class="sig-name descname"><span class="pre">will_have_available_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.will_have_available_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.will_have_available_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">will_have_available_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/station.html#Station.will_have_available_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.station.Station.will_have_available_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Checks whether Station will have any packages in available_packages at
 given time</p>
 <dl class="field-list simple">
@@ -684,10 +659,10 @@ given time</p>
 
 </section>
 <section id="module-transport_company.stationnetwork">
-<span id="transport-company-stationnetwork-module"></span><h2>transport_company.stationnetwork module<a class="headerlink" href="#module-transport_company.stationnetwork" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-stationnetwork-module"></span><h2>transport_company.stationnetwork module<a class="headerlink" href="#module-transport_company.stationnetwork" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.stationnetwork.</span></span><span class="sig-name descname"><span class="pre">StationNetwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stations_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.stationnetwork.</span></span><span class="sig-name descname"><span class="pre">StationNetwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stations_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Graph</span></code></p>
 <p>Class representing the whole network of Stations. It inherits all properties
 from Graph class. Its basic building blocks are instances of Station, which in turn
@@ -695,7 +670,7 @@ inherit from Vertex. Thus graph algorithms such as Dijkstra also work with this
 class</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.stations_file">
-<span class="sig-name descname"><span class="pre">stations_file</span></span><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.stations_file" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stations_file</span></span><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.stations_file" title="Permalink to this definition"></a></dt>
 <dd><p>path to file with information about the network of stations each line being
 in the following format: Station1 ID, Station2 ID, distance</p>
 <dl class="field-list simple">
@@ -707,7 +682,7 @@ in the following format: Station1 ID, Station2 ID, distance</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.stat_list">
-<span class="sig-name descname"><span class="pre">stat_list</span></span><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.stat_list" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stat_list</span></span><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.stat_list" title="Permalink to this definition"></a></dt>
 <dd><p>equivalent of vert_list in Graph for instances of Station</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -718,7 +693,7 @@ in the following format: Station1 ID, Station2 ID, distance</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.add_edge">
-<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.add_edge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.add_edge" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.add_edge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.add_edge" title="Permalink to this definition"></a></dt>
 <dd><p>Overrides Graph’s add_edge method such that it also creates connections
 between instances of Station</p>
 <dl class="field-list simple">
@@ -735,7 +710,7 @@ between instances of Station</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.add_station">
-<span class="sig-name descname"><span class="pre">add_station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.add_station"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.add_station" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">station_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.add_station"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.add_station" title="Permalink to this definition"></a></dt>
 <dd><p>Creates instance of Station with given ID and adds it stat_list</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -746,13 +721,13 @@ between instances of Station</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.create_network">
-<span class="sig-name descname"><span class="pre">create_network</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.create_network"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.create_network" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_network</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.create_network"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.create_network" title="Permalink to this definition"></a></dt>
 <dd><p>Creates the network using stations_file given at initialization</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.get_station">
-<span class="sig-name descname"><span class="pre">get_station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.get_station"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.get_station" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_station</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.get_station"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.get_station" title="Permalink to this definition"></a></dt>
 <dd><p>Station equivalent of get_vertex</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -763,32 +738,32 @@ between instances of Station</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.get_stations">
-<span class="sig-name descname"><span class="pre">get_stations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.get_stations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.get_stations" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_stations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.get_stations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.get_stations" title="Permalink to this definition"></a></dt>
 <dd><p>Station equivalent of get_vertices</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.is_empty">
-<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.is_empty" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.is_empty" title="Permalink to this definition"></a></dt>
 <dd><p>Invokes is_empty method on all Stations in stat_list, if all are empty
 returns True, returns False otherwise</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.num_packages_left">
-<span class="sig-name descname"><span class="pre">num_packages_left</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.num_packages_left"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.num_packages_left" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">num_packages_left</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.num_packages_left"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.num_packages_left" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of packages left in network</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.reset_packages">
-<span class="sig-name descname"><span class="pre">reset_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.reset_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.reset_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">reset_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.reset_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.reset_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Invokes reset_packages method on all Stations in stat_list</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.stationnetwork.StationNetwork.update_packages">
-<span class="sig-name descname"><span class="pre">update_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.update_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.update_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_packages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">timedelta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/stationnetwork.html#StationNetwork.update_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.stationnetwork.StationNetwork.update_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Invokes update_packages method on all Stations in stat_list</p>
 </dd></dl>
 
@@ -796,205 +771,205 @@ returns True, returns False otherwise</p>
 
 </section>
 <section id="module-transport_company.structures">
-<span id="transport-company-structures-module"></span><h2>transport_company.structures module<a class="headerlink" href="#module-transport_company.structures" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-structures-module"></span><h2>transport_company.structures module<a class="headerlink" href="#module-transport_company.structures" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.structures.BFS">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">BFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">BFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.BFS.bfs">
-<span class="sig-name descname"><span class="pre">bfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS.bfs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS.bfs" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">bfs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS.bfs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS.bfs" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.BFS.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS.clear" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS.clear" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.BFS.traverse">
-<span class="sig-name descname"><span class="pre">traverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS.traverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS.traverse" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">traverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#BFS.traverse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.BFS.traverse" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.structures.Dijkstra">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Dijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Dijkstra"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Dijkstra" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Dijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Dijkstra"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Dijkstra" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#transport_company.structures.BFS" title="transport_company.structures.BFS"><code class="xref py py-class docutils literal notranslate"><span class="pre">BFS</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Dijkstra.clear">
-<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Dijkstra.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Dijkstra.clear" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Dijkstra.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Dijkstra.clear" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Dijkstra.dijkstra">
-<span class="sig-name descname"><span class="pre">dijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Dijkstra.dijkstra"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Dijkstra.dijkstra" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Dijkstra.dijkstra"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Dijkstra.dijkstra" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.structures.Graph">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Graph</span></span><a class="reference internal" href="_modules/transport_company/structures.html#Graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Graph</span></span><a class="reference internal" href="_modules/transport_company/structures.html#Graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Graph.add_edge">
-<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.add_edge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.add_edge" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.add_edge"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.add_edge" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Graph.add_vertex">
-<span class="sig-name descname"><span class="pre">add_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.add_vertex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.add_vertex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.add_vertex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.add_vertex" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Graph.get_vertex">
-<span class="sig-name descname"><span class="pre">get_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.get_vertex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.get_vertex" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.get_vertex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.get_vertex" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Graph.get_vertices">
-<span class="sig-name descname"><span class="pre">get_vertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.get_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.get_vertices" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_vertices</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Graph.get_vertices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Graph.get_vertices" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">MinHeap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">MinHeap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.decrease_key">
-<span class="sig-name descname"><span class="pre">decrease_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.decrease_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.decrease_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">decrease_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.decrease_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.decrease_key" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.decrease_key_at_index">
-<span class="sig-name descname"><span class="pre">decrease_key_at_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.decrease_key_at_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.decrease_key_at_index" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">decrease_key_at_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_val</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.decrease_key_at_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.decrease_key_at_index" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.extract_min">
-<span class="sig-name descname"><span class="pre">extract_min</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.extract_min"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.extract_min" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">extract_min</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.extract_min"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.extract_min" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.heapify_down">
-<span class="sig-name descname"><span class="pre">heapify_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.heapify_down"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.heapify_down" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">heapify_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.heapify_down"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.heapify_down" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.heapify_up">
-<span class="sig-name descname"><span class="pre">heapify_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.heapify_up"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.heapify_up" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">heapify_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.heapify_up"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.heapify_up" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.insert_key">
-<span class="sig-name descname"><span class="pre">insert_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.insert_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.insert_key" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">insert_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.insert_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.insert_key" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.is_empty">
-<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.is_empty" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.is_empty" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.left_child">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">left_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.left_child"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.left_child" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">left_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.left_child"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.left_child" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.parent">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.parent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.parent" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.parent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.parent" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.peek">
-<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.peek" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.peek" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.right_child">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">right_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.right_child"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.right_child" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">right_child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.right_child"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.right_child" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.MinHeap.size">
-<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.size" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#MinHeap.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.MinHeap.size" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.structures.Stack">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Stack</span></span><a class="reference internal" href="_modules/transport_company/structures.html#Stack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Stack</span></span><a class="reference internal" href="_modules/transport_company/structures.html#Stack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Stack.is_empty">
-<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.is_empty" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.is_empty" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Stack.peek">
-<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.peek" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.peek" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Stack.pop">
-<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.pop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.pop" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Stack.push">
-<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.push" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.push"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.push" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Stack.size">
-<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.size" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Stack.size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Stack.size" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.structures.Vertex">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.structures.</span></span><span class="sig-name descname"><span class="pre">Vertex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Vertex.add_neighbor">
-<span class="sig-name descname"><span class="pre">add_neighbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.add_neighbor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.add_neighbor" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_neighbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.add_neighbor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.add_neighbor" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Vertex.get_connections">
-<span class="sig-name descname"><span class="pre">get_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.get_connections"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.get_connections" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_connections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.get_connections"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.get_connections" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Vertex.get_id">
-<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.get_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.get_id" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.get_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.get_id" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.structures.Vertex.get_weight">
-<span class="sig-name descname"><span class="pre">get_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.get_weight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.get_weight" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/structures.html#Vertex.get_weight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.structures.Vertex.get_weight" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="module-transport_company.transportcompany">
-<span id="transport-company-transportcompany-module"></span><h2>transport_company.transportcompany module<a class="headerlink" href="#module-transport_company.transportcompany" title="Permalink to this heading">¶</a></h2>
+<span id="transport-company-transportcompany-module"></span><h2>transport_company.transportcompany module<a class="headerlink" href="#module-transport_company.transportcompany" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="transport_company.transportcompany.TransportCompany">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.transportcompany.</span></span><span class="sig-name descname"><span class="pre">TransportCompany</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packages_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stations_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/transportcompany.html#TransportCompany"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.transportcompany.TransportCompany" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">transport_company.transportcompany.</span></span><span class="sig-name descname"><span class="pre">TransportCompany</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packages_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stations_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/transportcompany.html#TransportCompany"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.transportcompany.TransportCompany" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing the whole transport company. This is where all supplementary
 classes are used</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.transportcompany.TransportCompany.stationnet">
-<span class="sig-name descname"><span class="pre">stationnet</span></span><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.stationnet" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stationnet</span></span><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.stationnet" title="Permalink to this definition"></a></dt>
 <dd><p>represents the network of stations managed by the company</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -1005,7 +980,7 @@ classes are used</p>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="transport_company.transportcompany.TransportCompany.packages">
-<span class="sig-name descname"><span class="pre">packages</span></span><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">packages</span></span><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.packages" title="Permalink to this definition"></a></dt>
 <dd><p>represents the packages managed by the company</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -1016,7 +991,7 @@ classes are used</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.transportcompany.TransportCompany.create_itineraries">
-<span class="sig-name descname"><span class="pre">create_itineraries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wtf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/transportcompany.html#TransportCompany.create_itineraries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.create_itineraries" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_itineraries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wtf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/transportcompany.html#TransportCompany.create_itineraries"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.create_itineraries" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a dictionary containing itineraries for all drivers</p>
 <p>The basic structure of this simulation is as follows:</p>
 <ol class="arabic">
@@ -1055,7 +1030,7 @@ the drivers’ itineraries to a text file</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="transport_company.transportcompany.TransportCompany.distribute_packages">
-<span class="sig-name descname"><span class="pre">distribute_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/transportcompany.html#TransportCompany.distribute_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.distribute_packages" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">distribute_packages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/transport_company/transportcompany.html#TransportCompany.distribute_packages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#transport_company.transportcompany.TransportCompany.distribute_packages" title="Permalink to this definition"></a></dt>
 <dd><p>Parses through all instances of Package in packages attribute and assigns them
 to their appropriate source station</p>
 </dd></dl>
@@ -1064,216 +1039,38 @@ to their appropriate source station</p>
 
 </section>
 <section id="module-transport_company">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-transport_company" title="Permalink to this heading">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-transport_company" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          
-          <a class="prev-page" href="index.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Home</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2024, oliwka
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
+
+           </div>
           </div>
-          <div class="right-details">
-            
-          </div>
-        </div>
-        
-      </footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Transport Company’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">transport_company package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-transport_company.driver">transport_company.driver module</a><ul>
-<li><a class="reference internal" href="#transport_company.driver.Driver"><code class="docutils literal notranslate"><span class="pre">Driver</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.driver.Driver.id"><code class="docutils literal notranslate"><span class="pre">Driver.id</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.stationnet"><code class="docutils literal notranslate"><span class="pre">Driver.stationnet</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.current_station"><code class="docutils literal notranslate"><span class="pre">Driver.current_station</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.clock"><code class="docutils literal notranslate"><span class="pre">Driver.clock</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.work_time_remaining"><code class="docutils literal notranslate"><span class="pre">Driver.work_time_remaining</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.packages_delivered"><code class="docutils literal notranslate"><span class="pre">Driver.packages_delivered</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.itinerary"><code class="docutils literal notranslate"><span class="pre">Driver.itinerary</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.can_travel_anywhere"><code class="docutils literal notranslate"><span class="pre">Driver.can_travel_anywhere()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.can_travel_to"><code class="docutils literal notranslate"><span class="pre">Driver.can_travel_to()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.clock_print"><code class="docutils literal notranslate"><span class="pre">Driver.clock_print()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.pass_time"><code class="docutils literal notranslate"><span class="pre">Driver.pass_time()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.pickup_and_travel"><code class="docutils literal notranslate"><span class="pre">Driver.pickup_and_travel()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.take_package"><code class="docutils literal notranslate"><span class="pre">Driver.take_package()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.driver.Driver.travel_to"><code class="docutils literal notranslate"><span class="pre">Driver.travel_to()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.files_generator">transport_company.files_generator module</a><ul>
-<li><a class="reference internal" href="#transport_company.files_generator.generate_files"><code class="docutils literal notranslate"><span class="pre">generate_files()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.package">transport_company.package module</a><ul>
-<li><a class="reference internal" href="#transport_company.package.Package"><code class="docutils literal notranslate"><span class="pre">Package</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.package.Package.id"><code class="docutils literal notranslate"><span class="pre">Package.id</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.package.Package.start_station"><code class="docutils literal notranslate"><span class="pre">Package.start_station</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.package.Package.end_station"><code class="docutils literal notranslate"><span class="pre">Package.end_station</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.package.Package.time_available"><code class="docutils literal notranslate"><span class="pre">Package.time_available</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.packages">transport_company.packages module</a><ul>
-<li><a class="reference internal" href="#transport_company.packages.Packages"><code class="docutils literal notranslate"><span class="pre">Packages</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.packages.Packages.packages_file"><code class="docutils literal notranslate"><span class="pre">Packages.packages_file</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.packages.Packages.packages"><code class="docutils literal notranslate"><span class="pre">Packages.packages</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.packages.Packages.add_package"><code class="docutils literal notranslate"><span class="pre">Packages.add_package()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.packages.Packages.create_packages"><code class="docutils literal notranslate"><span class="pre">Packages.create_packages()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.packages.Packages.get_package"><code class="docutils literal notranslate"><span class="pre">Packages.get_package()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.packages.Packages.get_packages"><code class="docutils literal notranslate"><span class="pre">Packages.get_packages()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.station">transport_company.station module</a><ul>
-<li><a class="reference internal" href="#transport_company.station.Station"><code class="docutils literal notranslate"><span class="pre">Station</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.station.Station.station_id"><code class="docutils literal notranslate"><span class="pre">Station.station_id</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.packages_time"><code class="docutils literal notranslate"><span class="pre">Station.packages_time</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.available_packages"><code class="docutils literal notranslate"><span class="pre">Station.available_packages</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.distances"><code class="docutils literal notranslate"><span class="pre">Station.distances</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.add_package"><code class="docutils literal notranslate"><span class="pre">Station.add_package()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.distance_to"><code class="docutils literal notranslate"><span class="pre">Station.distance_to()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.has_available_packages"><code class="docutils literal notranslate"><span class="pre">Station.has_available_packages()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.is_empty"><code class="docutils literal notranslate"><span class="pre">Station.is_empty()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.reset_packages"><code class="docutils literal notranslate"><span class="pre">Station.reset_packages()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.update_packages"><code class="docutils literal notranslate"><span class="pre">Station.update_packages()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.when_next_package"><code class="docutils literal notranslate"><span class="pre">Station.when_next_package()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.station.Station.will_have_available_packages"><code class="docutils literal notranslate"><span class="pre">Station.will_have_available_packages()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.stationnetwork">transport_company.stationnetwork module</a><ul>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork"><code class="docutils literal notranslate"><span class="pre">StationNetwork</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.stations_file"><code class="docutils literal notranslate"><span class="pre">StationNetwork.stations_file</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.stat_list"><code class="docutils literal notranslate"><span class="pre">StationNetwork.stat_list</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.add_edge"><code class="docutils literal notranslate"><span class="pre">StationNetwork.add_edge()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.add_station"><code class="docutils literal notranslate"><span class="pre">StationNetwork.add_station()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.create_network"><code class="docutils literal notranslate"><span class="pre">StationNetwork.create_network()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.get_station"><code class="docutils literal notranslate"><span class="pre">StationNetwork.get_station()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.get_stations"><code class="docutils literal notranslate"><span class="pre">StationNetwork.get_stations()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.is_empty"><code class="docutils literal notranslate"><span class="pre">StationNetwork.is_empty()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.num_packages_left"><code class="docutils literal notranslate"><span class="pre">StationNetwork.num_packages_left()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.reset_packages"><code class="docutils literal notranslate"><span class="pre">StationNetwork.reset_packages()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.stationnetwork.StationNetwork.update_packages"><code class="docutils literal notranslate"><span class="pre">StationNetwork.update_packages()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.structures">transport_company.structures module</a><ul>
-<li><a class="reference internal" href="#transport_company.structures.BFS"><code class="docutils literal notranslate"><span class="pre">BFS</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.structures.BFS.bfs"><code class="docutils literal notranslate"><span class="pre">BFS.bfs()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.BFS.clear"><code class="docutils literal notranslate"><span class="pre">BFS.clear()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.BFS.traverse"><code class="docutils literal notranslate"><span class="pre">BFS.traverse()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transport_company.structures.Dijkstra"><code class="docutils literal notranslate"><span class="pre">Dijkstra</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.structures.Dijkstra.clear"><code class="docutils literal notranslate"><span class="pre">Dijkstra.clear()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Dijkstra.dijkstra"><code class="docutils literal notranslate"><span class="pre">Dijkstra.dijkstra()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transport_company.structures.Graph"><code class="docutils literal notranslate"><span class="pre">Graph</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.structures.Graph.add_edge"><code class="docutils literal notranslate"><span class="pre">Graph.add_edge()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Graph.add_vertex"><code class="docutils literal notranslate"><span class="pre">Graph.add_vertex()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Graph.get_vertex"><code class="docutils literal notranslate"><span class="pre">Graph.get_vertex()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Graph.get_vertices"><code class="docutils literal notranslate"><span class="pre">Graph.get_vertices()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap"><code class="docutils literal notranslate"><span class="pre">MinHeap</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.decrease_key"><code class="docutils literal notranslate"><span class="pre">MinHeap.decrease_key()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.decrease_key_at_index"><code class="docutils literal notranslate"><span class="pre">MinHeap.decrease_key_at_index()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.extract_min"><code class="docutils literal notranslate"><span class="pre">MinHeap.extract_min()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.heapify_down"><code class="docutils literal notranslate"><span class="pre">MinHeap.heapify_down()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.heapify_up"><code class="docutils literal notranslate"><span class="pre">MinHeap.heapify_up()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.insert_key"><code class="docutils literal notranslate"><span class="pre">MinHeap.insert_key()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.is_empty"><code class="docutils literal notranslate"><span class="pre">MinHeap.is_empty()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.left_child"><code class="docutils literal notranslate"><span class="pre">MinHeap.left_child()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.parent"><code class="docutils literal notranslate"><span class="pre">MinHeap.parent()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.peek"><code class="docutils literal notranslate"><span class="pre">MinHeap.peek()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.right_child"><code class="docutils literal notranslate"><span class="pre">MinHeap.right_child()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.MinHeap.size"><code class="docutils literal notranslate"><span class="pre">MinHeap.size()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transport_company.structures.Stack"><code class="docutils literal notranslate"><span class="pre">Stack</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.structures.Stack.is_empty"><code class="docutils literal notranslate"><span class="pre">Stack.is_empty()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Stack.peek"><code class="docutils literal notranslate"><span class="pre">Stack.peek()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Stack.pop"><code class="docutils literal notranslate"><span class="pre">Stack.pop()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Stack.push"><code class="docutils literal notranslate"><span class="pre">Stack.push()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Stack.size"><code class="docutils literal notranslate"><span class="pre">Stack.size()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transport_company.structures.Vertex"><code class="docutils literal notranslate"><span class="pre">Vertex</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.structures.Vertex.add_neighbor"><code class="docutils literal notranslate"><span class="pre">Vertex.add_neighbor()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Vertex.get_connections"><code class="docutils literal notranslate"><span class="pre">Vertex.get_connections()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Vertex.get_id"><code class="docutils literal notranslate"><span class="pre">Vertex.get_id()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.structures.Vertex.get_weight"><code class="docutils literal notranslate"><span class="pre">Vertex.get_weight()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company.transportcompany">transport_company.transportcompany module</a><ul>
-<li><a class="reference internal" href="#transport_company.transportcompany.TransportCompany"><code class="docutils literal notranslate"><span class="pre">TransportCompany</span></code></a><ul>
-<li><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.stationnet"><code class="docutils literal notranslate"><span class="pre">TransportCompany.stationnet</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.packages"><code class="docutils literal notranslate"><span class="pre">TransportCompany.packages</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.create_itineraries"><code class="docutils literal notranslate"><span class="pre">TransportCompany.create_itineraries()</span></code></a></li>
-<li><a class="reference internal" href="#transport_company.transportcompany.TransportCompany.distribute_packages"><code class="docutils literal notranslate"><span class="pre">TransportCompany.distribute_packages()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-transport_company">Module contents</a></li>
-</ul>
-</li>
-</ul>
 
-          </div>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, oliwka.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      
-      
-    </aside>
+    </section>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    </body>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
