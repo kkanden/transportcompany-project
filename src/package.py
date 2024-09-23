@@ -10,7 +10,7 @@ class Package:
         ID of source station
     end_station : str
         ID of destination
-    time : str
+    time_available : str
         time given in HH:MM format representing the time the package
         will be available at source station
         
@@ -18,12 +18,12 @@ class Package:
     --------
     """
     
-    def __init__(self, id, start, end, time):
+    def __init__(self, package_id: str, start_station: str, end_station: str, time_available: str):
         """ 
         
         Parameters
         ----------
-        id : str
+        package_id : str
             a unique package ID
         start_station : str
             ID of source station
@@ -34,7 +34,7 @@ class Package:
             will be available at source station
         """
         
-        self.id = id
-        self.start_station = start
-        self.end_station = end
-        self.time_available = time
+        self.id = package_id
+        self.start_station = start_station
+        self.end_station = end_station
+        self.time_available = time_available

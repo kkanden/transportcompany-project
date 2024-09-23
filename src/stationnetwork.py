@@ -1,3 +1,5 @@
+import datetime
+
 from station import Station
 from structures import Graph
 from structures import Dijkstra
@@ -34,19 +36,19 @@ class StationNetwork(Graph):
         self.stat_list = {}
         self.create_network()
 
-    def add_station(self, stat_id):
+    def add_station(self, station_id):
         """Creates instance of Station with given ID and adds it stat_list
         
         Parameters
         ----------
-        stat_id : str
+        station_id : str
             unique station ID
         """
         
-        new_station = Station(stat_id)
-        self.stat_list[stat_id] = new_station
+        new_station = Station(station_id)
+        self.stat_list[station_id] = new_station
 
-    def add_edge(self, f, t, weight=1, symmetric=False):
+    def add_edge(self, f: str, t: str, weight: int = 1, symmetric: bool = False):
         """Overrides Graph's add_edge method such that it also creates connections
         between instances of Station
 
@@ -71,7 +73,7 @@ class StationNetwork(Graph):
         if symmetric:
             self.stat_list[t].add_neighbor(self.stat_list[f], weight)
 
-    def get_station(self, stat_id):
+    def get_station(self, stat_id: str):
         """Station equivalent of get_vertex
         
         Parameters
@@ -87,7 +89,7 @@ class StationNetwork(Graph):
         
         return self.stat_list.keys()
 
-    def update_packages(self, clock):
+    def update_packages(self, clock: datetime.timedelta):
         """Invokes update_packages method on all Stations in stat_list"""
         
         for station in self.stat_list.values():

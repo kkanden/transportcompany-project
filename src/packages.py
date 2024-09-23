@@ -19,7 +19,7 @@ class Packages:
     -------
     """
     
-    def __init__(self, packages_file):
+    def __init__(self, packages_file: str):
         """
         Parameters
         ----------
@@ -40,42 +40,42 @@ class Packages:
         with open(self.packages_file, 'r') as f:
             for line in f:
                 line = line.strip().split()
-                pack_id, start, end, time_pack = line[0], line[1], line[2], dt.datetime.strptime(line[3], "%H:%M").time()
-                if start == end:
+                package_id, start_station, end_station, time_available = line[0], line[1], line[2], dt.datetime.strptime(line[3], "%H:%M").time()
+                if start_station == end_station:
                     continue
-                time_pack = dt.timedelta(seconds=3600 * time_pack.hour + 60 * time_pack.minute)
-                self.add_package(pack_id, start, end, time_pack)
+                time_available = dt.timedelta(seconds=3600 * time_available.hour + 60 * time_available.minute)
+                self.add_package(package_id, start_station, end_station, time_available)
 
-    def add_package(self, id, start, end, time_pack):
+    def add_package(self, package_id, start_station, end_station, time_available):
         """Creates single instance of Package with given variables and puts it in
         packages attribute
         
         Parameters
         ----------
-        id : str
+        package_id : str
             a unique package ID
         start_station : str
             ID of source station
         end_station : str
             ID of destination
-        time : str
+        time_available : str
             time given in HH:MM format representing the time the package
             will be available at source station
         """
         
-        new_package = Package(id, start, end, time_pack)
+        new_package = Package(package_id, start_station, end_station, time_available)
         self.packages[id] = new_package
 
-    def get_package(self, pack_id):
+    def get_package(self, package_id: str):
         """Returns instance of Package with given ID
 
         Parameters
         ----------
-        pack_id : str
+        package_id : str
             unique ID of package
         """
         
-        return self.packages[pack_id]
+        return self.packages[package_id]
 
     def get_packages(self):
         """Returns all instances of Package from packages attribute"""

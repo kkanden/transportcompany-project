@@ -1,5 +1,8 @@
+import datetime
 import datetime as dt
 import random
+from stationnetwork import StationNetwork
+from package import Package
 
 class Driver:
     """
@@ -11,7 +14,7 @@ class Driver:
         unique ID of driver
     stationnet : StationNetwork
         instance of StationNetwork the driver lives inside of
-    current_stations : Station
+    current_station : Station
         instance of Station the driver is currently in; at instantiation station is chosen randomly
     clock : datetime.timedelta
         driver's current time, at instantiation set to 6:00 AM
@@ -19,14 +22,14 @@ class Driver:
         at instantiation set to 8 hours
     packages_delivered : int
         number of packages delivered by Driver
-    itinerary : list
+    itinerary : list[str]
         list of subsequent actions made by the driver at given time
     
     Methods
     -------
     """
     
-    def __init__(self, driver_id, stationnet):
+    def __init__(self, driver_id: str, stationnet: StationNetwork):
         """
         
         Parameters
@@ -45,7 +48,7 @@ class Driver:
         self.packages_delivered = 0
         self.itinerary = []
 
-    def can_travel_to(self, stat_id):
+    def can_travel_to(self, stat_id: str):
         """Returns True if distance to Station with given ID is shorter than
         remaining worktime, returns False otherwise
         
@@ -67,7 +70,7 @@ class Driver:
                 return True
         return False
 
-    def pass_time(self, minutes):
+    def pass_time(self, minutes: datetime.timedelta):
         """Subtracts given time from work_time_remaining and adds it to clock
 
         Parameters
@@ -80,7 +83,7 @@ class Driver:
         self.clock += time_to_pass
         self.work_time_remaining -= time_to_pass
 
-    def take_package(self, pack):
+    def take_package(self, pack: Package):
         """Removes given instance of Package from driver's current station's
         available packages
 
@@ -98,7 +101,7 @@ class Driver:
         if index != -1:
             self.current_station.available_packages.pop(index)
 
-    def travel_to(self, stat_id):
+    def travel_to(self, stat_id: str):
         """Changes driver's current station to station given and passes an appropriate
         amount of time
         

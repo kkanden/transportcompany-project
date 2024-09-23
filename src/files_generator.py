@@ -4,7 +4,7 @@ import random
 
 
 # Generate the first text file
-def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
+def generate_files(n_stations: int, n_packages: int, file_name_station: str, file_name_package: str):
     """Generates two text files: one containing information of n_packages packages (unique ID, source station
     destination, time of availability at source station (HH:MM)), the other containing information of a station network
     with n_station Stations (Station1 ID, Station2 ID, distance)
@@ -15,16 +15,19 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
         number of stations in the network to be generated
     n_packages : int
         number of packages to be generated
-    file_name_stat : str
+    file_name_station : str
         path to file to generate station network information to
-    file_name_pack : str
+    file_name_package : str
         path to file to generate packages information to 
     """
     
     assert n_stations > 1
     assert n_packages > 0
     stat_ids = ["POL" + str(k) for k in range(n_stations)]
-    with open(file_name_pack, "w") as f:
+
+
+    # Generate packages with time available between 6:00 and 14:59
+    with open(file_name_package, "w") as f:
         for k in range(n_packages // 3):
             package_id = k
             start = random.choice(stat_ids)
@@ -48,6 +51,7 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
             f.write(f"{package_id} {start} {end} {hour}:{minute}\n")
 
 
+    # Generate Station Network ensuring that you can travel to every station from a given station
     distances = []
     connections = {}
     visited = set()
@@ -70,7 +74,7 @@ def generate_files(n_stations, n_packages, file_name_stat, file_name_pack):
             distance = random.randint(10, 40)
             distances.append((station1, station2, distance))
 
-    with open(file_name_stat, "w") as f:
+    with open(file_name_station, "w") as f:
         for distance in distances:
             f.write(f"{distance[0]} {distance[1]} {distance[2]}\n")
 

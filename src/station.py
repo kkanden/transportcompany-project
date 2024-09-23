@@ -1,5 +1,8 @@
+import datetime
+
 from structures import Vertex
 import datetime as dt
+from package import Package
 
 class Station(Vertex):
     """
@@ -7,12 +10,12 @@ class Station(Vertex):
     
     Attributes
     ----------
-    stat_id : str
+    station_id : str
         unique ID of station
-    packages_time : list
+    packages_time : list[Package]
         list of instances of Package that will be available on station,
         sorted non-decreasingly by time of availability
-    available_packages : list
+    available_packages : list[Package]
         list of instances of Package that are currently available on station,
         sorted non-decreasingly by time of availability by nature of how it is created
     distances : dict
@@ -23,21 +26,21 @@ class Station(Vertex):
     -------
     """
     
-    def __init__(self, stat_id):
+    def __init__(self, station_id: str):
         """
         
         Parameters
         ----------
-        stat_id : str
+        station_id : str
             unique ID of station
         """
         
-        super().__init__(stat_id)
+        super().__init__(station_id)
         self.packages_time = []
         self.available_packages = [] # this is sorted by time because packages_time is sorted
         self.distances = {} # already sorted by distance at creation in StationNetwork
 
-    def add_package(self, package):
+    def add_package(self, package: Package):
         """Adds instance of Package to packages_time attribute and instantly sorts
         non-decreasingly by time
 
@@ -50,7 +53,7 @@ class Station(Vertex):
         self.packages_time.append(package)
         self.packages_time = sorted(self.packages_time, key=lambda pack: pack.time_available) # sort by time
 
-    def update_packages(self, clock):
+    def update_packages(self, clock: datetime.timedelta):
         """Parses through packages_time and adds instance of Package to available_packages
         dictionary if clock is greater than or equal to time of availability of Package,
         then removes that Package from packages_time
@@ -92,7 +95,7 @@ class Station(Vertex):
         
         return self.available_packages != []
 
-    def will_have_available_packages(self, clock):
+    def will_have_available_packages(self, clock: datetime.timedelta):
         """Checks whether Station will have any packages in available_packages at 
         given time
         
@@ -115,7 +118,7 @@ class Station(Vertex):
             return dt.timedelta(days=100)
         return self.packages_time[0].time_available
 
-    def distance_to(self, stat_id):
+    def distance_to(self, stat_id: str):
         """Returns distance to other Station of given ID
         
         Parameters

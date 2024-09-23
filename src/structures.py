@@ -151,7 +151,7 @@ class Vertex:
 
 class Graph:
     def __init__(self):
-        # klucze - klucze (id) wierzchołków
+        # klucze - klucze (package_id) wierzchołków
         # wartości - wierzchołki (instancje Vertex)
         self.vert_list = {}
 

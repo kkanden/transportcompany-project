@@ -8,7 +8,7 @@ class TransportCompany:
     Class representing the whole transport company. This is where all supplementary
     classes are used
     
-    Attribues
+    Attributes
     ---------
     stationnet : StationNetwork
         represents the network of stations managed by the company
@@ -19,7 +19,7 @@ class TransportCompany:
     -------
     """
     
-    def __init__(self, packages_file, stations_file):
+    def __init__(self, packages_file: str, stations_file: str):
         """
         Parameters
         ----------
@@ -45,7 +45,7 @@ class TransportCompany:
             start_station = self.stationnet.get_station(pack.start_station)
             start_station.add_package(pack)
 
-    def create_itineraries(self, wtf=False):
+    def create_itineraries(self, wtf: bool = False):
         """Returns a dictionary containing itineraries for all drivers
         
         The basic structure of this simulation is as follows:
@@ -155,9 +155,9 @@ class TransportCompany:
             
         if wtf:
             with open("driver itineraries", "w") as f:
-                for dri in itineraries:
-                    f.write(f"Driver {dri}\n")
-                    for step in itineraries[dri]:
+                for driver in itineraries:
+                    f.write(f"Driver {driver}\n")
+                    for step in itineraries[driver]:
                         f.write(f"{step}\n")
                     f.write("----------\n")
                 f.write(f"Number of drivers: {len(itineraries)}")
