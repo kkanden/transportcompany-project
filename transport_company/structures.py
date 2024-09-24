@@ -1,3 +1,7 @@
+from queue import Queue
+from math import inf
+
+
 class Stack:
     def __init__(self):
         self.items = []
@@ -31,7 +35,8 @@ class MinHeap:
     # O(n log(n)), można lepiej: O(n)
     def __init__(self, values=()):
         self.heap = []
-        self.keys = dict()  # pod którym indeksem jest klucz: self.heap[i] == k jest tożsame z self.keys[k] == i
+        # pod którym indeksem jest klucz: self.heap[i] == k jest tożsame z self.keys[k] == i
+        self.keys = dict()
 
         for x in values:
             self.insert_key(x)
@@ -86,7 +91,8 @@ class MinHeap:
                 smallest = left
             if right < len(lst) and lst[right] < lst[smallest]:
                 smallest = right
-            if smallest == i:  # klucz nie mniejszy, niż klucze w lewym i prawym dziecku (jeśli istnieją): OK
+            # klucz nie mniejszy, niż klucze w lewym i prawym dziecku (jeśli istnieją): OK
+            if smallest == i:
                 break
             lst[i], lst[smallest] = lst[smallest], lst[i]
             self.keys[lst[i]] = i
@@ -132,7 +138,7 @@ class Vertex:
         # klucze - sąsiady (instancje Vertex)
         # wartości - wagi
         self.connected_to = {}
-        
+
     def get_id(self):
         return self.id
 
@@ -147,7 +153,7 @@ class Vertex:
 
     def __str__(self):
         return f"{self.id} connected to: {[x.id for x in self.connected_to]}."
-    
+
 
 class Graph:
     def __init__(self):
@@ -177,13 +183,12 @@ class Graph:
     def get_vertices(self):
         return self.vert_list.keys()
 
-    def __contains__(self, key): # key in g
+    def __contains__(self, key):  # key in g
         return key in self.vert_list
 
     def __iter__(self):
         return iter(self.vert_list.values())
-    
-from queue import Queue    
+
 
 class BFS:
     def __init__(self, g):
@@ -204,7 +209,7 @@ class BFS:
         self.clear()
         vert_queue = Queue()
 
-        vert_queue.put(self.g.vert_list[start_key]) # enqueue
+        vert_queue.put(self.g.vert_list[start_key])  # enqueue
         while not vert_queue.empty():
             current_vert = vert_queue.get()  # deque
             cur_key = current_vert.get_id()
@@ -220,7 +225,6 @@ class BFS:
 
             self.colors[cur_key] = 'black'
 
-
     def traverse(self, key_x):
         result = Stack()
         x = self.g.vert_list[key_x]
@@ -231,7 +235,6 @@ class BFS:
         result.push(x.get_id())
         return list(result)  # brak ścieżki: [key_x]
 
-from math import inf
 
 class Dijkstra(BFS):
     def clear(self):
@@ -264,4 +267,3 @@ class Dijkstra(BFS):
                                    (current_distance + weight, nbr_key))
                     self.distances[nbr_key] = current_distance + weight
                     self.predecessors[nbr_key] = current_vert
-

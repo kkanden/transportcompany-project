@@ -1,5 +1,6 @@
 import random
 
+
 # Generate random station IDs
 
 
@@ -20,11 +21,10 @@ def generate_files(n_stations: int, n_packages: int, file_name_station: str, fil
     file_name_package : str
         path to file to generate packages information to 
     """
-    
+
     assert n_stations > 1
     assert n_packages > 0
     stat_ids = ["POL" + str(k) for k in range(n_stations)]
-
 
     # Generate packages with time available between 6:00 and 14:59
     with open(file_name_package, "w") as f:
@@ -49,7 +49,6 @@ def generate_files(n_stations: int, n_packages: int, file_name_station: str, fil
             if minute in range(10):
                 minute = "0" + str(minute)
             f.write(f"{package_id} {start} {end} {hour}:{minute}\n")
-
 
     # Generate Station Network ensuring that you can travel to every station from a given station
     distances = []
@@ -81,4 +80,3 @@ def generate_files(n_stations: int, n_packages: int, file_name_station: str, fil
 
 if __name__ == "__main__":
     generate_files(50, 2000, "station_network.txt", "packages.txt")
-
